@@ -1,5 +1,6 @@
 package prj5;
 import java.util.Iterator;
+
 import java.util.NoSuchElementException;
 
 /**
@@ -43,7 +44,7 @@ public class StudentList
             throw new IllegalArgumentException();
         }
         
-        if (size == 0)
+        if (isEmpty())
         {
             firstNode = new Node<Student>(student);
         }
@@ -144,13 +145,14 @@ public class StudentList
      */
     public Iterator<Student> iterator()
     {
-        return new ListIterator();
+        return new StudentIterator();
     }
     
     /**
      * Nodes allow objects in the StudentList and SongList
      * to be connected together
      * @author lchar16
+     * @version 2017.04.15
      *
      * @param <E> the type of object in the node
      */
@@ -197,15 +199,16 @@ public class StudentList
     }
     
     /**
-     * Nested class in DLList, it iterates through
+     * Nested class in StudetList, it iterates through
      * the elements in the list
      * 
      * @author lchar16
+     * @version 2017.04.15
      *
-     * @param <A>
+     * @param <Student>
      *            the type of objects in the iterator
      */
-    private class ListIterator implements Iterator<Student> {
+    private class StudentIterator implements Iterator<Student> {
 
         // ~ Fields-----------------------
         private Node<Student> nextNode;
@@ -215,7 +218,7 @@ public class StudentList
         /**
          * Creates a new DLListIterator
          */
-        public ListIterator() {
+        public StudentIterator() {
             if (isEmpty()) {
                 nextNode = null;
             }
