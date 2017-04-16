@@ -1,0 +1,9 @@
+* StudentList doesn’t implement LList anymore because we found out that it wasn’t required and that we don’t need all of the methods in the interface because we only need to add the students into the list.
+* Solve() in Solver returns HashMap instead of 2D array. 
+o Method is also static now
+o Uses private method findSpecificAttribute()
+* Window needs a constructor: Window(SongList, StudentList)
+o Now has private fields for SongList and StudentList
+* Reader’s readSongs method returns the SongList and it’s readStudents method returns a StudentList
+o The methods also take in a string instead of a file
+
