@@ -1,100 +1,97 @@
 package prj5;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
  * This class sorts all songs by name, title, year,
  * and genre
- * 
  * @author lchar16
  * @version 2017.04.15
  *
  */
 public class SongList {
 
-    // ~ Fields------------------------
+    //~ Fields------------------------
     private Node<Song> firstSong;
-    private Node<Song> lastSong;
     private int size;
-
-
-    // ~ Constructor------------------
+    
+    //~ Constructor------------------
     /**
      * new empty SongList
      */
-    public SongList() {
+    public SongList()
+    {
         size = 0;
         firstSong = null;
-        lastSong = null;
     }
-
-
-    // ~ Methods------------------
+    
+    //~ Methods------------------
     /**
      * adds the song to the list
-     * 
-     * @param newSong
-     *            the new song to be added
+     * @param newSong the new song to be added
      */
-    public void add(Song newSong) {
-        if (newSong == null) {
+    public void add(Song newSong)
+    {
+        if (newSong == null)
+        {
             throw new IllegalArgumentException();
         }
-
-        if (isEmpty()) {
-            lastSong = new Node<Song>(newSong);
-            firstSong = lastSong;
+        
+        if (isEmpty())
+        {
+            firstSong = new Node<Song>(newSong);
         }
-        else {
+        else
+        {
             Node<Song> song = new Node<Song>(newSong);
-            lastSong.setNext(song);
-            lastSong = song;
+            song.setNext(firstSong);
+            firstSong = song;
         }
         size++;
     }
-
-
+    
     /**
      * 
      * @return how many songs are in the list
      */
-    public int getSize() {
+    public int getSize()
+    {
         return size;
     }
-
-
+    
     /**
      * 
      * @return whether or not the list is empty
      */
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return size == 0;
     }
-
-
+    
     /**
      * empties the list
      */
-    public void clear() {
-        if (firstSong != null) {
+    public void clear()
+    {
+        if (firstSong != null)
+        {
             firstSong.setNext(null);
             firstSong = null;
-            lastSong = null;
             size = 0;
         }
     }
-
-
+    
     /**
      * @return a string of all songs in the list
      */
-    public String toString() {
+    public String toString()
+    {
         StringBuilder builder = new StringBuilder();
         builder.append("Song List of " + size + " songs.\n");
         Node<Song> curr = firstSong;
         int i = 1;
-        while (curr != null) {
+        while (curr != null)
+        {
             builder.append("SONG " + i + " - ");
             builder.append(curr.getData().toString());
             builder.append("\n");
@@ -103,30 +100,30 @@ public class SongList {
         }
         return builder.toString();
     }
-
-
+    
     /*
      * @return an Iterator object to iterate through
      * the list of Songs
      */
-    public Iterator<Song> iterator() {
+    public Iterator<Song> iterator()
+    {
         return new SongIterator();
     }
-
-
+    
     /**
      * sorts songs according to the type indicated
-     * 
-     * @param type
-     *            the type of sorting category
-     * @return the first song in the sorted list, since
-     *         it may have changed
+     * @param type the type of sorting category
+     * @return the first song in the sorted list, since 
+     * it may have changed
      */
-    public Node<Song> sortSongs(SortType type) {
-        if ((firstSong != null) && (firstSong.next() != null)) {
+    public Node<Song> sortSongs(SortTypeEnum type)
+    {
+        if ((firstSong != null) && (firstSong.next() != null))
+        {
             Node<Song> unsortedPart = firstSong.next();
             firstSong.setNext(null);
-            while (unsortedPart != null) {
+            while (unsortedPart != null)
+            {
                 Node<Song> nodeToInsert = unsortedPart;
                 unsortedPart = unsortedPart.next();
                 firstSong = insertInOrder(firstSong, nodeToInsert, type);
@@ -134,141 +131,136 @@ public class SongList {
         }
         return firstSong;
     }
-
-
+    
     /**
      * Helper method for sort method
      * puts the given node into the right position
-     * 
-     * @param first
-     *            the first node of the sorted part
-     * @param insertNode
-     *            the node to be put into the right position
-     *            in the sorted part
+     * @param first the first node of the sorted part
+     * @param insertNode the node to be put into the right position
+     * in the sorted part
      * @return the first song in the list, since it may have changed
      */
-    private Node<Song> insertInOrder(
-        Node<Song> first,
-        Node<Song> insertNode,
-        SortType type) {
+    private Node<Song> insertInOrder(Node<Song> first, Node<Song> insertNode, SortTypeEnum type)
+    {
         Song item = insertNode.getData();
         Node<Song> curr = first;
         Node<Song> previous = null;
-
-        switch (type) {
-            case title: {
-                while ((curr != null) && (item.getTitle().compareTo(curr
-                    .getData().getTitle()) > 0)) {
+        
+        switch (type)
+        {
+            case title:
+            {
+                while ((curr != null) && (
+                    item.getTitle().compareTo(curr.getData().getTitle()) > 0))
+                {
                     previous = curr;
                     curr = curr.next();
                 }
                 break;
             }
-            case artist: {
-                while ((curr != null) && (item.getArtist().compareTo(curr
-                    .getData().getArtist()) >= 0)) {
+            case artist:
+            {
+                while ((curr != null) && (
+                    item.getArtist().compareTo(curr.getData().getArtist()) >= 0))
+                {
                     previous = curr;
                     curr = curr.next();
-// if ((curr != null) && (
-// item.getArtist().compareTo(curr.getData().getArtist()) == 0))
-// {
-// while (item.getTitle().compareTo(curr.getData().getTitle()) > 0)
-// {
-// previous = curr;
-// curr = curr.next();
-// }
-// }
+//                    if ((curr != null) && (
+//                        item.getArtist().compareTo(curr.getData().getArtist()) == 0))
+//                    {
+//                        while (item.getTitle().compareTo(curr.getData().getTitle()) > 0)
+//                        {
+//                            previous = curr;
+//                            curr = curr.next();
+//                        }
+//                    }
                 }
-
+                
                 break;
             }
-            case genre: {
-                while ((curr != null) && (item.getGenre().compareTo(curr
-                    .getData().getGenre()) > 0)) {
+            case genre:
+            {
+                while ((curr != null) && (
+                    item.getGenre().compareTo(curr.getData().getGenre()) > 0))
+                {
                     previous = curr;
                     curr = curr.next();
                 }
                 break;
             }
-            case year: {
-                while ((curr != null) && item.getYear() > curr.getData()
-                    .getYear()) {
+            case year:
+            {
+                while ((curr != null) && item.getYear() > curr.getData().getYear())
+                {
                     previous = curr;
                     curr = curr.next();
                 }
             }
         }
-
-        if (previous != null) {
+        
+        if (previous != null)
+        {
             previous.setNext(insertNode);
             insertNode.setNext(curr);
         }
-        else {
+        else
+        {
             insertNode.setNext(first);
             first = insertNode;
         }
-
+        
         return first;
     }
-
-
     /**
      * Nodes allow objects in the StudentList and SongList
      * to be connected together
-     * 
      * @author lchar16
      * @version 2017.04.15
      *
-     * @param <E>
-     *            the type of object in the node
+     * @param <E> the type of object in the node
      */
     public class Node<E> {
-
-        // ~ Fields-------------------------
+        
+        //~ Fields-------------------------
         private E data;
         private Node<E> next;
 
-
-        // ~ Constructor----------------------
+        //~ Constructor----------------------
         /**
          * A new Node object with data entry
-         * 
-         * @param entry
-         *            is the data it stores
+         * @param entry is the data it stores
          */
-        public Node(E entry) {
+        public Node(E entry)
+        {
             data = entry;
         }
-
-
+        
         /**
          * links the node to the next one
-         * 
-         * @param nextNode
-         *            is the node this one will point to
+         * @param nextNode is the node this one will point to
          */
-        public void setNext(Node<E> nextNode) {
+        public void setNext(Node<E> nextNode)
+        {
             next = nextNode;
         }
-
-
+        
         /**
          * @return the next node in the list
          */
-        public Node<E> next() {
+        public Node<E> next()
+        {
             return next;
         }
-
-
+        
         /**
          * @return data that this node stores
          */
-        public E getData() {
+        public E getData()
+        {
             return data;
         }
     }
-
-
+    
     /**
      * Nested class in StudetList, it iterates through
      * the elements in the list
@@ -283,7 +275,7 @@ public class SongList {
 
         // ~ Fields-----------------------
         private Node<Song> nextNode;
-        // private boolean nextCalled;
+        //private boolean nextCalled;
 
 
         /**
@@ -296,7 +288,7 @@ public class SongList {
             else {
                 nextNode = firstSong;
             }
-            // nextCalled = false;
+            //nextCalled = false;
         }
 
 
@@ -326,7 +318,7 @@ public class SongList {
         @Override
         public Song next() {
             if (hasNext()) {
-                // nextCalled = true;
+                //nextCalled = true;
                 Node<Song> returnNode = nextNode;
                 nextNode = nextNode.next();
                 return returnNode.getData();
