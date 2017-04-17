@@ -167,5 +167,67 @@ public class GUIwindow {
             window.addShape(likes[i]);
         }
 
+        // Legend
+        int legendStartX = 700;
+        int legendStartY = 200;
+        int legendWidth = 150;
+        int legendHeight = 250;
+        TextShape legendTitle = new TextShape(legendStartX, legendStartY,
+            "Legend Title");
+        legendTitle.setBackgroundColor(Color.WHITE);
+        legendTitle.move(legendWidth / 2 - legendTitle.getWidth() / 2, 5);
+        window.addShape(legendTitle);
+
+        Shape legendDivider = new Shape(legendStartX + legendWidth / 2
+            - divHeight / 2, 400, divHeight, divWidth, Color.BLACK);
+        window.addShape(legendDivider);
+        
+        TextShape legendSongTitle = new TextShape(legendStartX + legendWidth
+            / 2, legendStartY + 180, "Song Title");
+        legendSongTitle.move(-legendSongTitle.getWidth() / 2, 0);
+        legendSongTitle.setBackgroundColor(Color.WHITE);
+        window.addShape(legendSongTitle);
+        
+        TextShape legendHeards = new TextShape(legendStartX + legendWidth / 2
+            - divHeight / 2, 400 + divHeight / 2, "Heards");
+        legendHeards.move(-legendHeards.getWidth() - 5, 0);
+        legendHeards.setBackgroundColor(Color.WHITE);
+        window.addShape(legendHeards);
+
+        TextShape legendLikes = new TextShape(legendStartX + legendWidth / 2
+            - divHeight / 2, 400 + divHeight / 2, "Likes");
+        legendLikes.move(divHeight, 0);
+        legendLikes.setBackgroundColor(Color.WHITE);
+        window.addShape(legendLikes);
+
+        TextShape legendAttribute1 = new TextShape(legendStartX + legendWidth
+            / 2, legendStartY + 50, "Attribute 1", Color.MAGENTA);
+        legendAttribute1.move(-legendAttribute1.getWidth() / 2, 0);
+        legendAttribute1.setBackgroundColor(Color.WHITE);
+        window.addShape(legendAttribute1);
+
+        TextShape legendAttribute2 = new TextShape(legendStartX + legendWidth
+            / 2, legendStartY + 75, "Attribute 2", Color.BLUE);
+        legendAttribute2.move(-legendAttribute2.getWidth() / 2, 0);
+        legendAttribute2.setBackgroundColor(Color.WHITE);
+        window.addShape(legendAttribute2);
+
+        TextShape legendAttribute3 = new TextShape(legendStartX + legendWidth
+            / 2, legendStartY + 100, "Attribute 3", Color.YELLOW);
+        legendAttribute3.move(-legendAttribute3.getWidth() / 2, 0);
+        legendAttribute3.setBackgroundColor(Color.WHITE);
+        window.addShape(legendAttribute3);
+
+        TextShape legendAttribute4 = new TextShape(legendStartX + legendWidth
+            / 2, legendStartY + 125, "Attribute 4", Color.GREEN);
+        legendAttribute4.move(-legendAttribute4.getWidth() / 2, 0);
+        legendAttribute4.setBackgroundColor(Color.WHITE);
+        window.addShape(legendAttribute4);
+
+        Shape legendOutline = new Shape(legendStartX, legendStartY, legendWidth,
+            legendHeight, Color.BLACK);
+        legendOutline.setBackgroundColor(Color.WHITE);
+        window.addShape(legendOutline);
+
     }
 }
