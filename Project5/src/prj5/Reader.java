@@ -33,7 +33,7 @@ public class Reader {
     public Reader(String songFile, String studentFile) {
         SongList songList = readSongs(songFile);
         StudentList studentList = readStudents(studentFile);
-        //GUIwindow window = new GUIwindow(songList, studentList);
+        new GUIwindow();
     }
 
 

@@ -1,0 +1,90 @@
+Song Title: All These Things I've Done
+Song Artist: The Killers
+Song Genre: alternative
+Song Year: 2005
+Heard
+reading:0 art:0 sports:50 music:0
+Likes
+reading:0 art:0 sports:50 music:100
+
+Song Title: Another One Bites the Dust
+Song Artist: Queen
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:100 art:0 sports:100 music:100
+Likes
+reading:100 art:0 sports:33 music:100
+
+Song Title: American Pie
+Song Artist: Don McLean
+Song Genre: folk rock
+Song Year: 1971
+Heard
+reading:100 art:0 sports:100 music:0
+Likes
+reading:0 art:0 sports:75 music:0
+
+Song Title: All You Need Is Love
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1967
+Heard
+reading:100 art:0 sports:100 music:0
+Likes
+reading:100 art:0 sports:50 music:100
+
+Song Title: Anarchy in the UK
+Song Artist: The Sex Pistols
+Song Genre: punk
+Song Year: 1976
+Heard
+reading:0 art:0 sports:0 music:0
+Likes
+reading:0 art:0 sports:0 music:100
+
+Song Title: All These Things I've Done
+Song Artist: The Killers
+Song Genre: alternative
+Song Year: 2005
+Heard
+reading:0 art:0 sports:50 music:0
+Likes
+reading:0 art:0 sports:50 music:100
+
+Song Title: All You Need Is Love
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1967
+Heard
+reading:100 art:0 sports:100 music:0
+Likes
+reading:100 art:0 sports:50 music:100
+
+Song Title: American Pie
+Song Artist: Don McLean
+Song Genre: folk rock
+Song Year: 1971
+Heard
+reading:100 art:0 sports:100 music:0
+Likes
+reading:0 art:0 sports:75 music:0
+
+Song Title: Anarchy in the UK
+Song Artist: The Sex Pistols
+Song Genre: punk
+Song Year: 1976
+Heard
+reading:0 art:0 sports:0 music:0
+Likes
+reading:0 art:0 sports:0 music:100
+
+Song Title: Another One Bites the Dust
+Song Artist: Queen
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:100 art:0 sports:100 music:100
+Likes
+reading:100 art:0 sports:33 music:100
+

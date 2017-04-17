@@ -1,0 +1,306 @@
+Song Title: Party Rock Anthem
+Song Artist: LMFAO
+Song Genre: EDM
+Song Year: 2011
+Heard
+reading:86 art:79 sports:87 music:87
+Likes
+reading:53 art:50 sports:47 music:43
+
+Song Title: No One
+Song Artist: Alicia Keys
+Song Genre: R&B
+Song Year: 2007
+Heard
+reading:46 art:30 sports:56 music:59
+Likes
+reading:35 art:18 sports:40 music:41
+
+Song Title: All These Things I've Done
+Song Artist: The Killers
+Song Genre: alternative
+Song Year: 2005
+Heard
+reading:41 art:37 sports:34 music:35
+Likes
+reading:41 art:40 sports:33 music:38
+
+Song Title: I Will Always Love You
+Song Artist: Whitney Houston
+Song Genre: country
+Song Year: 1973
+Heard
+reading:80 art:83 sports:65 music:81
+Likes
+reading:51 art:54 sports:47 music:53
+
+Song Title: Call Me
+Song Artist: Blondie
+Song Genre: dance rock
+Song Year: 1980
+Heard
+reading:46 art:41 sports:22 music:42
+Likes
+reading:44 art:26 sports:20 music:30
+
+Song Title: Another One Bites the Dust
+Song Artist: Queen
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:93 art:83 sports:87 music:80
+Likes
+reading:83 art:63 sports:67 music:70
+
+Song Title: Tik Tok
+Song Artist: Ke$ha
+Song Genre: electronic
+Song Year: 2009
+Heard
+reading:80 art:79 sports:79 music:84
+Likes
+reading:46 art:25 sports:37 music:42
+
+Song Title: American Pie
+Song Artist: Don McLean
+Song Genre: folk rock
+Song Year: 1971
+Heard
+reading:73 art:58 sports:63 music:68
+Likes
+reading:62 art:47 sports:54 music:63
+
+Song Title: Life On Mars?
+Song Artist: David Bowie
+Song Genre: glam rock
+Song Year: 1971
+Heard
+reading:13 art:13 sports:11 music:32
+Likes
+reading:14 art:9 sports:10 music:24
+
+Song Title: Smells Like Teen Spirit 
+Song Artist: Nirvana
+Song Genre: grunge
+Song Year: 1991
+Heard
+reading:63 art:62 sports:59 music:71
+Likes
+reading:51 art:47 sports:55 music:63
+
+Song Title: Boom Boom Pow
+Song Artist: The Black Eyed Peas
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:90 art:75 sports:91 music:85
+Likes
+reading:43 art:29 sports:47 music:27
+
+Song Title: Take Me To Church
+Song Artist: Hozier
+Song Genre: indie rock
+Song Year: 2013
+Heard
+reading:73 art:66 sports:80 music:83
+Likes
+reading:62 art:52 sports:54 music:61
+
+Song Title: Bad Blood
+Song Artist: Taylor Swift
+Song Genre: pop
+Song Year: 2015
+Heard
+reading:83 art:79 sports:84 music:90
+Likes
+reading:51 art:47 sports:53 music:46
+
+Song Title: All You Need Is Love
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1967
+Heard
+reading:90 art:70 sports:72 music:81
+Likes
+reading:79 art:56 sports:61 music:72
+
+Song Title: Anarchy in the UK
+Song Artist: The Sex Pistols
+Song Genre: punk
+Song Year: 1976
+Heard
+reading:20 art:12 sports:31 music:38
+Likes
+reading:22 art:8 sports:31 music:29
+
+Song Title: Every Breath You Take
+Song Artist: The Police
+Song Genre: rock
+Song Year: 1983
+Heard
+reading:66 art:58 sports:65 music:69
+Likes
+reading:51 art:43 sports:52 music:62
+
+Song Title: Imagine
+Song Artist: John Lennon
+Song Genre: soft rock
+Song Year: 1971
+Heard
+reading:63 art:58 sports:66 music:72
+Likes
+reading:58 art:43 sports:60 music:60
+
+Song Title: All These Things I've Done
+Song Artist: The Killers
+Song Genre: alternative
+Song Year: 2005
+Heard
+reading:41 art:37 sports:34 music:35
+Likes
+reading:41 art:40 sports:33 music:38
+
+Song Title: All You Need Is Love
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1967
+Heard
+reading:90 art:70 sports:72 music:81
+Likes
+reading:79 art:56 sports:61 music:72
+
+Song Title: American Pie
+Song Artist: Don McLean
+Song Genre: folk rock
+Song Year: 1971
+Heard
+reading:73 art:58 sports:63 music:68
+Likes
+reading:62 art:47 sports:54 music:63
+
+Song Title: Anarchy in the UK
+Song Artist: The Sex Pistols
+Song Genre: punk
+Song Year: 1976
+Heard
+reading:20 art:12 sports:31 music:38
+Likes
+reading:22 art:8 sports:31 music:29
+
+Song Title: Another One Bites the Dust
+Song Artist: Queen
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:93 art:83 sports:87 music:80
+Likes
+reading:83 art:63 sports:67 music:70
+
+Song Title: Bad Blood
+Song Artist: Taylor Swift
+Song Genre: pop
+Song Year: 2015
+Heard
+reading:83 art:79 sports:84 music:90
+Likes
+reading:51 art:47 sports:53 music:46
+
+Song Title: Boom Boom Pow
+Song Artist: The Black Eyed Peas
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:90 art:75 sports:91 music:85
+Likes
+reading:43 art:29 sports:47 music:27
+
+Song Title: Call Me
+Song Artist: Blondie
+Song Genre: dance rock
+Song Year: 1980
+Heard
+reading:46 art:41 sports:22 music:42
+Likes
+reading:44 art:26 sports:20 music:30
+
+Song Title: Every Breath You Take
+Song Artist: The Police
+Song Genre: rock
+Song Year: 1983
+Heard
+reading:66 art:58 sports:65 music:69
+Likes
+reading:51 art:43 sports:52 music:62
+
+Song Title: I Will Always Love You
+Song Artist: Whitney Houston
+Song Genre: country
+Song Year: 1973
+Heard
+reading:80 art:83 sports:65 music:81
+Likes
+reading:51 art:54 sports:47 music:53
+
+Song Title: Imagine
+Song Artist: John Lennon
+Song Genre: soft rock
+Song Year: 1971
+Heard
+reading:63 art:58 sports:66 music:72
+Likes
+reading:58 art:43 sports:60 music:60
+
+Song Title: Life On Mars?
+Song Artist: David Bowie
+Song Genre: glam rock
+Song Year: 1971
+Heard
+reading:13 art:13 sports:11 music:32
+Likes
+reading:14 art:9 sports:10 music:24
+
+Song Title: No One
+Song Artist: Alicia Keys
+Song Genre: R&B
+Song Year: 2007
+Heard
+reading:46 art:30 sports:56 music:59
+Likes
+reading:35 art:18 sports:40 music:41
+
+Song Title: Party Rock Anthem
+Song Artist: LMFAO
+Song Genre: EDM
+Song Year: 2011
+Heard
+reading:86 art:79 sports:87 music:87
+Likes
+reading:53 art:50 sports:47 music:43
+
+Song Title: Smells Like Teen Spirit 
+Song Artist: Nirvana
+Song Genre: grunge
+Song Year: 1991
+Heard
+reading:63 art:62 sports:59 music:71
+Likes
+reading:51 art:47 sports:55 music:63
+
+Song Title: Take Me To Church
+Song Artist: Hozier
+Song Genre: indie rock
+Song Year: 2013
+Heard
+reading:73 art:66 sports:80 music:83
+Likes
+reading:62 art:52 sports:54 music:61
+
+Song Title: Tik Tok
+Song Artist: Ke$ha
+Song Genre: electronic
+Song Year: 2009
+Heard
+reading:80 art:79 sports:79 music:84
+Likes
+reading:46 art:25 sports:37 music:42
+

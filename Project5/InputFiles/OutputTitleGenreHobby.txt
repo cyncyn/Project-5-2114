@@ -1,0 +1,1062 @@
+Song Title: Party Rock Anthem
+Song Artist: LMFAO
+Song Genre: EDM
+Song Year: 2011
+Heard
+reading:86 art:79 sports:87 music:87
+Likes
+reading:53 art:50 sports:47 music:43
+
+Song Title: We Belong Together
+Song Artist: Mariah Carey
+Song Genre: R&B
+Song Year: 2005
+Heard
+reading:30 art:43 sports:31 music:36
+Likes
+reading:20 art:21 sports:18 music:22
+
+Song Title: Single Ladies (Ring On It)
+Song Artist: Beyonce
+Song Genre: R&B
+Song Year: 2009
+Heard
+reading:90 art:82 sports:94 music:93
+Likes
+reading:65 art:34 sports:47 music:54
+
+Song Title: Rehab
+Song Artist: Amy Winehouse
+Song Genre: R&B
+Song Year: 2006
+Heard
+reading:53 art:34 sports:40 music:46
+Likes
+reading:37 art:15 sports:25 music:36
+
+Song Title: No One
+Song Artist: Alicia Keys
+Song Genre: R&B
+Song Year: 2007
+Heard
+reading:46 art:30 sports:56 music:59
+Likes
+reading:35 art:18 sports:40 music:41
+
+Song Title: All These Things I've Done
+Song Artist: The Killers
+Song Genre: alternative
+Song Year: 2005
+Heard
+reading:41 art:37 sports:34 music:35
+Likes
+reading:41 art:40 sports:33 music:38
+
+Song Title: I Will Always Love You
+Song Artist: Whitney Houston
+Song Genre: country
+Song Year: 1973
+Heard
+reading:80 art:83 sports:65 music:81
+Likes
+reading:51 art:54 sports:47 music:53
+
+Song Title: Call Me
+Song Artist: Blondie
+Song Genre: dance rock
+Song Year: 1980
+Heard
+reading:46 art:41 sports:22 music:42
+Likes
+reading:44 art:26 sports:20 music:30
+
+Song Title: Upside Down
+Song Artist: Diana Ross
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:20 art:8 sports:5 music:19
+Likes
+reading:17 art:8 sports:4 music:14
+
+Song Title: Stayin' Alive
+Song Artist: Bee Gees
+Song Genre: disco
+Song Year: 1978
+Heard
+reading:86 art:70 sports:72 music:74
+Likes
+reading:65 art:58 sports:57 music:60
+
+Song Title: I Will Survive
+Song Artist: Gloria Gaynor
+Song Genre: disco
+Song Year: 1978
+Heard
+reading:90 art:79 sports:73 music:71
+Likes
+reading:70 art:54 sports:54 music:61
+
+Song Title: Dancing Queen
+Song Artist: ABBA
+Song Genre: disco
+Song Year: 1976
+Heard
+reading:80 art:70 sports:70 music:71
+Likes
+reading:53 art:56 sports:45 music:64
+
+Song Title: Another One Bites the Dust
+Song Artist: Queen
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:93 art:83 sports:87 music:80
+Likes
+reading:83 art:63 sports:67 music:70
+
+Song Title: Tik Tok
+Song Artist: Ke$ha
+Song Genre: electronic
+Song Year: 2009
+Heard
+reading:80 art:79 sports:79 music:84
+Likes
+reading:46 art:25 sports:37 music:42
+
+Song Title: Help!
+Song Artist: The Beatles
+Song Genre: folk rock
+Song Year: 1965
+Heard
+reading:55 art:39 sports:54 music:54
+Likes
+reading:53 art:31 sports:46 music:54
+
+Song Title: Bridge Over Troubled Water
+Song Artist: Simon and Garfunkel
+Song Genre: folk rock
+Song Year: 1970
+Heard
+reading:36 art:25 sports:27 music:45
+Likes
+reading:27 art:26 sports:26 music:43
+
+Song Title: American Pie
+Song Artist: Don McLean
+Song Genre: folk rock
+Song Year: 1971
+Heard
+reading:73 art:58 sports:63 music:68
+Likes
+reading:62 art:47 sports:54 music:63
+
+Song Title: Life On Mars?
+Song Artist: David Bowie
+Song Genre: glam rock
+Song Year: 1971
+Heard
+reading:13 art:13 sports:11 music:32
+Likes
+reading:14 art:9 sports:10 music:24
+
+Song Title: Somebody To Love
+Song Artist: Queen
+Song Genre: gospel
+Song Year: 1976
+Heard
+reading:80 art:70 sports:69 music:71
+Likes
+reading:79 art:54 sports:53 music:70
+
+Song Title: Smells Like Teen Spirit 
+Song Artist: Nirvana
+Song Genre: grunge
+Song Year: 1991
+Heard
+reading:63 art:62 sports:59 music:71
+Likes
+reading:51 art:47 sports:55 music:63
+
+Song Title: Yeah!
+Song Artist: Usher
+Song Genre: hip hop
+Song Year: 2004
+Heard
+reading:63 art:58 sports:72 music:57
+Likes
+reading:57 art:33 sports:49 music:36
+
+Song Title: Low
+Song Artist: Flo Rida
+Song Genre: hip hop
+Song Year: 2008
+Heard
+reading:76 art:59 sports:79 music:79
+Likes
+reading:46 art:36 sports:45 music:42
+
+Song Title: I Gotta Feeling
+Song Artist: The Black Eyed Peas
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:93 art:100 sports:93 music:94
+Likes
+reading:51 art:54 sports:50 music:46
+
+Song Title: Gold Digger
+Song Artist: Kanye West
+Song Genre: hip hop
+Song Year: 2005
+Heard
+reading:60 art:58 sports:84 music:72
+Likes
+reading:41 art:17 sports:72 music:56
+
+Song Title: Empire State Of Mind
+Song Artist: Jay Z & Alicia Keys
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:63 art:37 sports:77 music:74
+Likes
+reading:53 art:26 sports:68 music:57
+
+Song Title: Boom Boom Pow
+Song Artist: The Black Eyed Peas
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:90 art:75 sports:91 music:85
+Likes
+reading:43 art:29 sports:47 music:27
+
+Song Title: Take Me To Church
+Song Artist: Hozier
+Song Genre: indie rock
+Song Year: 2013
+Heard
+reading:73 art:66 sports:80 music:83
+Likes
+reading:62 art:52 sports:54 music:61
+
+Song Title: Somebody That I Used to Know
+Song Artist: Gotye
+Song Genre: pop
+Song Year: 2011
+Heard
+reading:83 art:79 sports:79 music:84
+Likes
+reading:65 art:41 sports:53 music:72
+
+Song Title: Shake it Off
+Song Artist: Taylor Swift
+Song Genre: pop
+Song Year: 2014
+Heard
+reading:83 art:87 sports:93 music:90
+Likes
+reading:50 art:43 sports:55 music:55
+
+Song Title: Run
+Song Artist: Snow Patrol
+Song Genre: pop
+Song Year: 2003
+Heard
+reading:26 art:33 sports:23 music:24
+Likes
+reading:28 art:30 sports:22 music:23
+
+Song Title: Royals
+Song Artist: Lorde
+Song Genre: pop
+Song Year: 2014
+Heard
+reading:80 art:79 sports:84 music:90
+Likes
+reading:48 art:50 sports:52 music:72
+
+Song Title: Rolling in the Deep
+Song Artist: Adele
+Song Genre: pop
+Song Year: 2010
+Heard
+reading:80 art:79 sports:85 music:94
+Likes
+reading:62 art:41 sports:60 music:75
+
+Song Title: Moves Like Jagger
+Song Artist: Maroon 5
+Song Genre: pop
+Song Year: 2011
+Heard
+reading:93 art:87 sports:91 music:88
+Likes
+reading:56 art:45 sports:51 music:43
+
+Song Title: MacArthur Park
+Song Artist: Richard Harris
+Song Genre: pop
+Song Year: 1968
+Heard
+reading:6 art:8 sports:2 music:7
+Likes
+reading:7 art:14 sports:0 music:7
+
+Song Title: Macarena
+Song Artist: Los del Rio
+Song Genre: pop
+Song Year: 1994
+Heard
+reading:83 art:60 sports:62 music:77
+Likes
+reading:60 art:30 sports:20 music:40
+
+Song Title: Just the Way You Are
+Song Artist: Bruno Mars
+Song Genre: pop
+Song Year: 2010
+Heard
+reading:90 art:82 sports:90 music:88
+Likes
+reading:56 art:56 sports:47 music:63
+
+Song Title: Call Me Maybe
+Song Artist: Carly Rae Jepsen
+Song Genre: pop
+Song Year: 2011
+Heard
+reading:93 art:87 sports:94 music:95
+Likes
+reading:33 art:26 sports:32 music:40
+
+Song Title: Bad Blood
+Song Artist: Taylor Swift
+Song Genre: pop
+Song Year: 2015
+Heard
+reading:83 art:79 sports:84 music:90
+Likes
+reading:51 art:47 sports:53 music:46
+
+Song Title: You Can't Always Get What You Want
+Song Artist: The Rolling Stones
+Song Genre: pop rock
+Song Year: 1969
+Heard
+reading:60 art:37 sports:55 music:55
+Likes
+reading:58 art:29 sports:53 music:52
+
+Song Title: Something
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1970
+Heard
+reading:30 art:29 sports:37 music:42
+Likes
+reading:32 art:30 sports:29 music:40
+
+Song Title: Physical
+Song Artist: Olivia Newton John
+Song Genre: pop rock
+Song Year: 1981
+Heard
+reading:40 art:20 sports:20 music:36
+Likes
+reading:20 art:9 sports:7 music:20
+
+Song Title: Let It Be
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1970
+Heard
+reading:70 art:73 sports:77 music:71
+Likes
+reading:68 art:75 sports:66 music:69
+
+Song Title: I'm a Believer
+Song Artist: The Monkees
+Song Genre: pop rock
+Song Year: 1966
+Heard
+reading:63 art:62 sports:54 music:67
+Likes
+reading:63 art:52 sports:47 music:59
+
+Song Title: I Want to Hold Your Hand
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1963
+Heard
+reading:46 art:37 sports:41 music:42
+Likes
+reading:34 art:39 sports:34 music:32
+
+Song Title: I Am... I Said
+Song Artist: Neil Diamond
+Song Genre: pop rock
+Song Year: 1971
+Heard
+reading:10 art:12 sports:8 music:12
+Likes
+reading:10 art:4 sports:7 music:8
+
+Song Title: Hey Jude
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1968
+Heard
+reading:82 art:62 sports:84 music:80
+Likes
+reading:72 art:54 sports:74 music:75
+
+Song Title: All You Need Is Love
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1967
+Heard
+reading:90 art:70 sports:72 music:81
+Likes
+reading:79 art:56 sports:61 music:72
+
+Song Title: Watching the Detectives
+Song Artist: Elvis Costello
+Song Genre: punk
+Song Year: 1977
+Heard
+reading:10 art:4 sports:7 music:9
+Likes
+reading:11 art:0 sports:4 music:11
+
+Song Title: Anarchy in the UK
+Song Artist: The Sex Pistols
+Song Genre: punk
+Song Year: 1976
+Heard
+reading:20 art:12 sports:31 music:38
+Likes
+reading:22 art:8 sports:31 music:29
+
+Song Title: Uma Thurman
+Song Artist: Fall Out Boy
+Song Genre: rock
+Song Year: 2015
+Heard
+reading:66 art:50 sports:56 music:54
+Likes
+reading:51 art:33 sports:51 music:48
+
+Song Title: Space Oddity
+Song Artist: David Bowie
+Song Genre: rock
+Song Year: 1969
+Heard
+reading:30 art:16 sports:25 music:35
+Likes
+reading:31 art:17 sports:25 music:28
+
+Song Title: Light My Fire
+Song Artist: The Doors
+Song Genre: rock
+Song Year: 1966
+Heard
+reading:24 art:27 sports:25 music:38
+Likes
+reading:25 art:20 sports:27 music:31
+
+Song Title: Jealous Guy
+Song Artist: John Lennon
+Song Genre: rock
+Song Year: 1971
+Heard
+reading:16 art:13 sports:11 music:19
+Likes
+reading:14 art:13 sports:10 music:18
+
+Song Title: I Still Haven't Found What I'm Looking For
+Song Artist: U2
+Song Genre: rock
+Song Year: 1987
+Heard
+reading:66 art:45 sports:51 music:62
+Likes
+reading:55 art:39 sports:39 music:57
+
+Song Title: I Love Rock 'n Roll
+Song Artist: Joan Jett & the Blackhearts
+Song Genre: rock
+Song Year: 1982
+Heard
+reading:76 art:62 sports:63 music:75
+Likes
+reading:73 art:34 sports:50 music:58
+
+Song Title: Hotel California
+Song Artist: The Eagles
+Song Genre: rock
+Song Year: 1976
+Heard
+reading:86 art:83 sports:79 music:82
+Likes
+reading:73 art:75 sports:70 music:76
+
+Song Title: Eye of the Tiger
+Song Artist: Survivor
+Song Genre: rock
+Song Year: 1982
+Heard
+reading:93 art:95 sports:93 music:88
+Likes
+reading:86 art:91 sports:77 music:77
+
+Song Title: Every Breath You Take
+Song Artist: The Police
+Song Genre: rock
+Song Year: 1983
+Heard
+reading:66 art:58 sports:65 music:69
+Likes
+reading:51 art:43 sports:52 music:62
+
+Song Title: Imagine
+Song Artist: John Lennon
+Song Genre: soft rock
+Song Year: 1971
+Heard
+reading:63 art:58 sports:66 music:72
+Likes
+reading:58 art:43 sports:60 music:60
+
+Song Title: All These Things I've Done
+Song Artist: The Killers
+Song Genre: alternative
+Song Year: 2005
+Heard
+reading:41 art:37 sports:34 music:35
+Likes
+reading:41 art:40 sports:33 music:38
+
+Song Title: All You Need Is Love
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1967
+Heard
+reading:90 art:70 sports:72 music:81
+Likes
+reading:79 art:56 sports:61 music:72
+
+Song Title: American Pie
+Song Artist: Don McLean
+Song Genre: folk rock
+Song Year: 1971
+Heard
+reading:73 art:58 sports:63 music:68
+Likes
+reading:62 art:47 sports:54 music:63
+
+Song Title: Anarchy in the UK
+Song Artist: The Sex Pistols
+Song Genre: punk
+Song Year: 1976
+Heard
+reading:20 art:12 sports:31 music:38
+Likes
+reading:22 art:8 sports:31 music:29
+
+Song Title: Another One Bites the Dust
+Song Artist: Queen
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:93 art:83 sports:87 music:80
+Likes
+reading:83 art:63 sports:67 music:70
+
+Song Title: Bad Blood
+Song Artist: Taylor Swift
+Song Genre: pop
+Song Year: 2015
+Heard
+reading:83 art:79 sports:84 music:90
+Likes
+reading:51 art:47 sports:53 music:46
+
+Song Title: Boom Boom Pow
+Song Artist: The Black Eyed Peas
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:90 art:75 sports:91 music:85
+Likes
+reading:43 art:29 sports:47 music:27
+
+Song Title: Bridge Over Troubled Water
+Song Artist: Simon and Garfunkel
+Song Genre: folk rock
+Song Year: 1970
+Heard
+reading:36 art:25 sports:27 music:45
+Likes
+reading:27 art:26 sports:26 music:43
+
+Song Title: Call Me
+Song Artist: Blondie
+Song Genre: dance rock
+Song Year: 1980
+Heard
+reading:46 art:41 sports:22 music:42
+Likes
+reading:44 art:26 sports:20 music:30
+
+Song Title: Call Me Maybe
+Song Artist: Carly Rae Jepsen
+Song Genre: pop
+Song Year: 2011
+Heard
+reading:93 art:87 sports:94 music:95
+Likes
+reading:33 art:26 sports:32 music:40
+
+Song Title: Dancing Queen
+Song Artist: ABBA
+Song Genre: disco
+Song Year: 1976
+Heard
+reading:80 art:70 sports:70 music:71
+Likes
+reading:53 art:56 sports:45 music:64
+
+Song Title: Empire State Of Mind
+Song Artist: Jay Z & Alicia Keys
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:63 art:37 sports:77 music:74
+Likes
+reading:53 art:26 sports:68 music:57
+
+Song Title: Every Breath You Take
+Song Artist: The Police
+Song Genre: rock
+Song Year: 1983
+Heard
+reading:66 art:58 sports:65 music:69
+Likes
+reading:51 art:43 sports:52 music:62
+
+Song Title: Eye of the Tiger
+Song Artist: Survivor
+Song Genre: rock
+Song Year: 1982
+Heard
+reading:93 art:95 sports:93 music:88
+Likes
+reading:86 art:91 sports:77 music:77
+
+Song Title: Gold Digger
+Song Artist: Kanye West
+Song Genre: hip hop
+Song Year: 2005
+Heard
+reading:60 art:58 sports:84 music:72
+Likes
+reading:41 art:17 sports:72 music:56
+
+Song Title: Help!
+Song Artist: The Beatles
+Song Genre: folk rock
+Song Year: 1965
+Heard
+reading:55 art:39 sports:54 music:54
+Likes
+reading:53 art:31 sports:46 music:54
+
+Song Title: Hey Jude
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1968
+Heard
+reading:82 art:62 sports:84 music:80
+Likes
+reading:72 art:54 sports:74 music:75
+
+Song Title: Hotel California
+Song Artist: The Eagles
+Song Genre: rock
+Song Year: 1976
+Heard
+reading:86 art:83 sports:79 music:82
+Likes
+reading:73 art:75 sports:70 music:76
+
+Song Title: I Am... I Said
+Song Artist: Neil Diamond
+Song Genre: pop rock
+Song Year: 1971
+Heard
+reading:10 art:12 sports:8 music:12
+Likes
+reading:10 art:4 sports:7 music:8
+
+Song Title: I Gotta Feeling
+Song Artist: The Black Eyed Peas
+Song Genre: hip hop
+Song Year: 2009
+Heard
+reading:93 art:100 sports:93 music:94
+Likes
+reading:51 art:54 sports:50 music:46
+
+Song Title: I Love Rock 'n Roll
+Song Artist: Joan Jett & the Blackhearts
+Song Genre: rock
+Song Year: 1982
+Heard
+reading:76 art:62 sports:63 music:75
+Likes
+reading:73 art:34 sports:50 music:58
+
+Song Title: I Still Haven't Found What I'm Looking For
+Song Artist: U2
+Song Genre: rock
+Song Year: 1987
+Heard
+reading:66 art:45 sports:51 music:62
+Likes
+reading:55 art:39 sports:39 music:57
+
+Song Title: I Want to Hold Your Hand
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1963
+Heard
+reading:46 art:37 sports:41 music:42
+Likes
+reading:34 art:39 sports:34 music:32
+
+Song Title: I Will Always Love You
+Song Artist: Whitney Houston
+Song Genre: country
+Song Year: 1973
+Heard
+reading:80 art:83 sports:65 music:81
+Likes
+reading:51 art:54 sports:47 music:53
+
+Song Title: I Will Survive
+Song Artist: Gloria Gaynor
+Song Genre: disco
+Song Year: 1978
+Heard
+reading:90 art:79 sports:73 music:71
+Likes
+reading:70 art:54 sports:54 music:61
+
+Song Title: I'm a Believer
+Song Artist: The Monkees
+Song Genre: pop rock
+Song Year: 1966
+Heard
+reading:63 art:62 sports:54 music:67
+Likes
+reading:63 art:52 sports:47 music:59
+
+Song Title: Imagine
+Song Artist: John Lennon
+Song Genre: soft rock
+Song Year: 1971
+Heard
+reading:63 art:58 sports:66 music:72
+Likes
+reading:58 art:43 sports:60 music:60
+
+Song Title: Jealous Guy
+Song Artist: John Lennon
+Song Genre: rock
+Song Year: 1971
+Heard
+reading:16 art:13 sports:11 music:19
+Likes
+reading:14 art:13 sports:10 music:18
+
+Song Title: Just the Way You Are
+Song Artist: Bruno Mars
+Song Genre: pop
+Song Year: 2010
+Heard
+reading:90 art:82 sports:90 music:88
+Likes
+reading:56 art:56 sports:47 music:63
+
+Song Title: Let It Be
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1970
+Heard
+reading:70 art:73 sports:77 music:71
+Likes
+reading:68 art:75 sports:66 music:69
+
+Song Title: Life On Mars?
+Song Artist: David Bowie
+Song Genre: glam rock
+Song Year: 1971
+Heard
+reading:13 art:13 sports:11 music:32
+Likes
+reading:14 art:9 sports:10 music:24
+
+Song Title: Light My Fire
+Song Artist: The Doors
+Song Genre: rock
+Song Year: 1966
+Heard
+reading:24 art:27 sports:25 music:38
+Likes
+reading:25 art:20 sports:27 music:31
+
+Song Title: Low
+Song Artist: Flo Rida
+Song Genre: hip hop
+Song Year: 2008
+Heard
+reading:76 art:59 sports:79 music:79
+Likes
+reading:46 art:36 sports:45 music:42
+
+Song Title: MacArthur Park
+Song Artist: Richard Harris
+Song Genre: pop
+Song Year: 1968
+Heard
+reading:6 art:8 sports:2 music:7
+Likes
+reading:7 art:14 sports:0 music:7
+
+Song Title: Macarena
+Song Artist: Los del Rio
+Song Genre: pop
+Song Year: 1994
+Heard
+reading:83 art:60 sports:62 music:77
+Likes
+reading:60 art:30 sports:20 music:40
+
+Song Title: Moves Like Jagger
+Song Artist: Maroon 5
+Song Genre: pop
+Song Year: 2011
+Heard
+reading:93 art:87 sports:91 music:88
+Likes
+reading:56 art:45 sports:51 music:43
+
+Song Title: No One
+Song Artist: Alicia Keys
+Song Genre: R&B
+Song Year: 2007
+Heard
+reading:46 art:30 sports:56 music:59
+Likes
+reading:35 art:18 sports:40 music:41
+
+Song Title: Party Rock Anthem
+Song Artist: LMFAO
+Song Genre: EDM
+Song Year: 2011
+Heard
+reading:86 art:79 sports:87 music:87
+Likes
+reading:53 art:50 sports:47 music:43
+
+Song Title: Physical
+Song Artist: Olivia Newton John
+Song Genre: pop rock
+Song Year: 1981
+Heard
+reading:40 art:20 sports:20 music:36
+Likes
+reading:20 art:9 sports:7 music:20
+
+Song Title: Rehab
+Song Artist: Amy Winehouse
+Song Genre: R&B
+Song Year: 2006
+Heard
+reading:53 art:34 sports:40 music:46
+Likes
+reading:37 art:15 sports:25 music:36
+
+Song Title: Rolling in the Deep
+Song Artist: Adele
+Song Genre: pop
+Song Year: 2010
+Heard
+reading:80 art:79 sports:85 music:94
+Likes
+reading:62 art:41 sports:60 music:75
+
+Song Title: Royals
+Song Artist: Lorde
+Song Genre: pop
+Song Year: 2014
+Heard
+reading:80 art:79 sports:84 music:90
+Likes
+reading:48 art:50 sports:52 music:72
+
+Song Title: Run
+Song Artist: Snow Patrol
+Song Genre: pop
+Song Year: 2003
+Heard
+reading:26 art:33 sports:23 music:24
+Likes
+reading:28 art:30 sports:22 music:23
+
+Song Title: Shake it Off
+Song Artist: Taylor Swift
+Song Genre: pop
+Song Year: 2014
+Heard
+reading:83 art:87 sports:93 music:90
+Likes
+reading:50 art:43 sports:55 music:55
+
+Song Title: Single Ladies (Ring On It)
+Song Artist: Beyonce
+Song Genre: R&B
+Song Year: 2009
+Heard
+reading:90 art:82 sports:94 music:93
+Likes
+reading:65 art:34 sports:47 music:54
+
+Song Title: Smells Like Teen Spirit 
+Song Artist: Nirvana
+Song Genre: grunge
+Song Year: 1991
+Heard
+reading:63 art:62 sports:59 music:71
+Likes
+reading:51 art:47 sports:55 music:63
+
+Song Title: Somebody That I Used to Know
+Song Artist: Gotye
+Song Genre: pop
+Song Year: 2011
+Heard
+reading:83 art:79 sports:79 music:84
+Likes
+reading:65 art:41 sports:53 music:72
+
+Song Title: Somebody To Love
+Song Artist: Queen
+Song Genre: gospel
+Song Year: 1976
+Heard
+reading:80 art:70 sports:69 music:71
+Likes
+reading:79 art:54 sports:53 music:70
+
+Song Title: Something
+Song Artist: The Beatles
+Song Genre: pop rock
+Song Year: 1970
+Heard
+reading:30 art:29 sports:37 music:42
+Likes
+reading:32 art:30 sports:29 music:40
+
+Song Title: Space Oddity
+Song Artist: David Bowie
+Song Genre: rock
+Song Year: 1969
+Heard
+reading:30 art:16 sports:25 music:35
+Likes
+reading:31 art:17 sports:25 music:28
+
+Song Title: Stayin' Alive
+Song Artist: Bee Gees
+Song Genre: disco
+Song Year: 1978
+Heard
+reading:86 art:70 sports:72 music:74
+Likes
+reading:65 art:58 sports:57 music:60
+
+Song Title: Take Me To Church
+Song Artist: Hozier
+Song Genre: indie rock
+Song Year: 2013
+Heard
+reading:73 art:66 sports:80 music:83
+Likes
+reading:62 art:52 sports:54 music:61
+
+Song Title: Tik Tok
+Song Artist: Ke$ha
+Song Genre: electronic
+Song Year: 2009
+Heard
+reading:80 art:79 sports:79 music:84
+Likes
+reading:46 art:25 sports:37 music:42
+
+Song Title: Uma Thurman
+Song Artist: Fall Out Boy
+Song Genre: rock
+Song Year: 2015
+Heard
+reading:66 art:50 sports:56 music:54
+Likes
+reading:51 art:33 sports:51 music:48
+
+Song Title: Upside Down
+Song Artist: Diana Ross
+Song Genre: disco
+Song Year: 1980
+Heard
+reading:20 art:8 sports:5 music:19
+Likes
+reading:17 art:8 sports:4 music:14
+
+Song Title: Watching the Detectives
+Song Artist: Elvis Costello
+Song Genre: punk
+Song Year: 1977
+Heard
+reading:10 art:4 sports:7 music:9
+Likes
+reading:11 art:0 sports:4 music:11
+
+Song Title: We Belong Together
+Song Artist: Mariah Carey
+Song Genre: R&B
+Song Year: 2005
+Heard
+reading:30 art:43 sports:31 music:36
+Likes
+reading:20 art:21 sports:18 music:22
+
+Song Title: Yeah!
+Song Artist: Usher
+Song Genre: hip hop
+Song Year: 2004
+Heard
+reading:63 art:58 sports:72 music:57
+Likes
+reading:57 art:33 sports:49 music:36
+
+Song Title: You Can't Always Get What You Want
+Song Artist: The Rolling Stones
+Song Genre: pop rock
+Song Year: 1969
+Heard
+reading:60 art:37 sports:55 music:55
+Likes
+reading:58 art:29 sports:53 music:52
+
