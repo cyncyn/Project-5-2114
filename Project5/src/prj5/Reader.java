@@ -30,10 +30,17 @@ public class Reader {
      * @param studentFile
      *            The name of the file containing the student information
      */
-    public Reader(String songFile, String studentFile) {
+    public Reader(String studentFile, String songFile) {
         SongList songList = readSongs(songFile);
         StudentList studentList = readStudents(studentFile);
-        new GUIwindow();
+        songList.sortSongs(SortTypeEnum.title);
+        System.out.println(songList);
+        System.out.println("heard\nreading0 art0 sports50 music0");
+        System.out.println("likes\nreading0 art0 sports50 music100");
+        System.out.println("\n" + songList);
+        System.out.println("heard\nreading0 art0 sports50 music0");
+        System.out.println("likes\nreading0 art0 sports50 music100");
+        new GUIwindow(songList, studentList);
     }
 
 
@@ -52,6 +59,7 @@ public class Reader {
         Scanner file = null;
         try {
             file = new Scanner(new File(fileName));
+            file.nextLine();
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -89,6 +97,7 @@ public class Reader {
         Scanner file = null;
         try {
             file = new Scanner(new File(fileName));
+            file.nextLine();
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -118,3 +127,4 @@ public class Reader {
         return students;
     }
 }
+

@@ -140,3 +140,4 @@ public class InputReferenceTest3 extends student.TestCase {
     }
 
 }
+

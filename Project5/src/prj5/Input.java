@@ -17,5 +17,6 @@ public class Input {
      */
     public static void main(String[] args) {
         new Reader(args[0], args[1]);
+        
     }
 }

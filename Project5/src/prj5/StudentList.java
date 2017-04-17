@@ -1,134 +1,134 @@
 package prj5;
-
 import java.util.Iterator;
+
 import java.util.NoSuchElementException;
 
 /**
  * StudentList keeps track of all the students in the
- * file
- * 
+ * file 
  * @author lchar16
  * @version 2017.04.13
  *
  */
-public class StudentList {
-    // ~ Fields---------------------
+public class StudentList
+{
+    //~ Fields---------------------
     private Node<Student> firstNode;
     private int size;
-
-
-    // ~ Constructor------------------
-    public StudentList() {
+    
+    //~ Constructor------------------
+    public StudentList()
+    {
         firstNode = null;
         size = 0;
     }
-
-
-    // ~ Methods------------------------
+    
+    //~ Methods------------------------
     /**
      * 
      * @return the size of the list
      */
-    public int size() {
+    public int size()
+    {
         return size;
     }
-
-
+    
     /**
      * adds the student to the front of the list
-     * 
-     * @param student
-     *            Student to be added
+     * @param student Student to be added
      */
-    public void add(Student student) {
-        if (student == null) {
+    public void add(Student student)
+    {
+        if (student == null)
+        {
             throw new IllegalArgumentException();
         }
-
-        if (isEmpty()) {
+        
+        if (isEmpty())
+        {
             firstNode = new Node<Student>(student);
         }
-        else {
+        else
+        {
             Node<Student> st = new Node<Student>(student);
             st.setNext(firstNode);
             firstNode = st;
         }
         size++;
-
+        
     }
-
-
+    
     /**
      * @return if the list is empty or not
      */
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return size == 0;
     }
-
-// public void remove(Student student)
-// {
-// Node<Student> curr = firstNode;
-//
-// } do we need an remove method?????
-
+    
+//    public void remove(Student student)
+//    {
+//        Node<Student> curr = firstNode;
+//        
+//    } do we need an remove method????? 
+    
     /**
      * returns the student at that position
-     * 
-     * @param pos
-     *            Position in the list
+     * @param pos Position in the list
      * @return the Student in the position
      */
-// public Student get(int pos)
-// {
-// Node<Student> curr = firstNode;
-// int i = 1;
-// Student s = null;
-// while (curr != null)
-// {
-// if (i == pos)
-// {
-// s = curr.getData();
-// }
-// i++;
-// curr = curr.next();
-// }
-//
-// if (s == null)
-// {
-// throw new IndexOutOfBoundsException();
-// }
-// return s;
-// }
-
-
-// public boolean contains(Student student)
-// {
-// } do we need contains??!??
-
+//    public Student get(int pos)
+//    {
+//        Node<Student> curr = firstNode;
+//        int i = 1;
+//        Student s = null;
+//        while (curr != null)
+//        {
+//            if (i == pos)
+//            {
+//                s = curr.getData();
+//            }
+//            i++;
+//            curr = curr.next();
+//        }
+//        
+//        if (s == null)
+//        {
+//            throw new IndexOutOfBoundsException();
+//        }
+//        return s;
+//    }
+    
+//    public boolean contains(Student student)
+//    {
+//    } do we need contains??!??
+    
     /**
      * empties the list
      */
-    public void clear() {
-        if (firstNode != null) {
+    public void clear()
+    {
+        if (firstNode != null)
+        {
             firstNode.setNext(null);
             firstNode = null;
             size = 0;
         }
     }
-
-
+    
     /**
-     * returns all the students in the list
+     * returns all the students in the list 
      * concatenated in a string
-     * 
      * @return String of the students in the list
      */
-    public String toString() {
+    public String toString()
+    {
         StringBuilder builder = new StringBuilder();
         builder.append("List of " + size() + " Students.\n");
         Node<Student> curr = firstNode;
         int i = 1;
-        while (curr != null) {
+        while (curr != null)
+        {
             builder.append("STUDENT " + i + " - ");
             builder.append(curr.getData().toString());
             builder.append("\n");
@@ -137,75 +137,67 @@ public class StudentList {
         }
         return builder.toString();
     }
-
-
+    
     /**
      * 
      * @return an Iterator object to iterate through
-     *         the list of students
+     * the list of students
      */
-    public Iterator<Student> iterator() {
+    public Iterator<Student> iterator()
+    {
         return new StudentIterator();
     }
-
-
+    
     /**
      * Nodes allow objects in the StudentList and SongList
      * to be connected together
-     * 
      * @author lchar16
      * @version 2017.04.15
      *
-     * @param <E>
-     *            the type of object in the node
+     * @param <E> the type of object in the node
      */
     public class Node<E> {
-
-        // ~ Fields-------------------------
+        
+        //~ Fields-------------------------
         private E data;
         private Node<E> next;
 
-
-        // ~ Constructor----------------------
+        //~ Constructor----------------------
         /**
          * A new Node object with data entry
-         * 
-         * @param entry
-         *            is the data it stores
+         * @param entry is the data it stores
          */
-        public Node(E entry) {
+        public Node(E entry)
+        {
             data = entry;
         }
-
-
+        
         /**
          * links the node to the next one
-         * 
-         * @param nextNode
-         *            is the node this one will point to
+         * @param nextNode is the node this one will point to
          */
-        public void setNext(Node<E> nextNode) {
+        public void setNext(Node<E> nextNode)
+        {
             next = nextNode;
         }
-
-
+        
         /**
          * @return the next node in the list
          */
-        public Node<E> next() {
+        public Node<E> next()
+        {
             return next;
         }
-
-
+        
         /**
          * @return data that this node stores
          */
-        public E getData() {
+        public E getData()
+        {
             return data;
         }
     }
-
-
+    
     /**
      * Nested class in StudetList, it iterates through
      * the elements in the list
@@ -220,7 +212,7 @@ public class StudentList {
 
         // ~ Fields-----------------------
         private Node<Student> nextNode;
-        // private boolean nextCalled;
+        //private boolean nextCalled;
 
 
         /**
@@ -233,7 +225,7 @@ public class StudentList {
             else {
                 nextNode = firstNode;
             }
-            // nextCalled = false;
+            //nextCalled = false;
         }
 
 
@@ -263,7 +255,7 @@ public class StudentList {
         @Override
         public Student next() {
             if (hasNext()) {
-                // nextCalled = true;
+                //nextCalled = true;
                 Node<Student> returnNode = nextNode;
                 nextNode = nextNode.next();
                 return returnNode.getData();
@@ -273,6 +265,7 @@ public class StudentList {
             }
         }
 
+
         /**
          * Removes the last object returned with next() from the list
          *
@@ -280,10 +273,11 @@ public class StudentList {
          *             if next has not been called yet
          *             and if the element has already been removed
          */
-// @Override
-// public void remove() { don't need a remove method
-//
-// }
+//        @Override
+//        public void remove() { don't need a remove method
+//            
+//        }
     }
+
 
 }

@@ -19,10 +19,6 @@ public class GUIwindow {
 
     // ~ Fields----------------------
     private Window window;
-// private int windowHeight;
-// private int windowWidth;
-// private int cellHeight;
-// private int cellWidth;
     private Button artistButton;
     private Button titleButton;
     private Button yearButton;
@@ -36,11 +32,21 @@ public class GUIwindow {
     private TextShape[] titles;
     private Shape[] heards;
     private Shape[] likes;
+    
+    private SongList songs;
+    private StudentList students;
 
 
     // ~ Constructor---------------------
-    public GUIwindow() {
+    /**
+     * new GUIwindow object that has buttons
+     * set up and also window
+     */
+    public GUIwindow(SongList songList, StudentList studentList) {
         window = new Window("Project 5");
+        
+        songs = songList;
+        students = studentList;
 
         setUpButtons();
 
@@ -48,6 +54,9 @@ public class GUIwindow {
     }
 
 
+    /**
+     * instantiates and adds all the buttons
+     */
     private void setUpButtons() {
         previous = new Button("Previous");
         window.addButton(previous, WindowSide.NORTH);
@@ -91,6 +100,10 @@ public class GUIwindow {
     }
 
 
+    /**
+     * this method sets up the window with the legend,
+     * and 9 glyphs with the song titles, like, and heard bars
+     */
     private void setUpWindow() {
         int startX = 100;
         int startY = 10;
