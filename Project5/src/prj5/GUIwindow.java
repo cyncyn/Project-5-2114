@@ -1,6 +1,8 @@
 package prj5;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Iterator;
 import CS2114.Button;
 import CS2114.Shape;
 import CS2114.TextShape;
@@ -32,9 +34,10 @@ public class GUIwindow {
     private TextShape[] titles;
     private Shape[] heards;
     private Shape[] likes;
-    
+
     private SongList songs;
     private StudentList students;
+    private Reader reader;
 
 
     // ~ Constructor---------------------
@@ -42,15 +45,19 @@ public class GUIwindow {
      * new GUIwindow object that has buttons
      * set up and also window
      */
-    public GUIwindow(SongList songList, StudentList studentList) {
+    public GUIwindow(SongList songList, StudentList studentList, Reader r) {
         window = new Window("Project 5");
-        
+
         songs = songList;
         students = studentList;
+        reader = r;
 
         setUpButtons();
 
         setUpWindow();
+
+        clickedTitle(titleButton);
+        clickedHobby(hobbyButton);
     }
 
 
@@ -194,13 +201,13 @@ public class GUIwindow {
         Shape legendDivider = new Shape(legendStartX + legendWidth / 2
             - divHeight / 2, 400, divHeight, divWidth, Color.BLACK);
         window.addShape(legendDivider);
-        
+
         TextShape legendSongTitle = new TextShape(legendStartX + legendWidth
             / 2, legendStartY + 180, "Song Title");
         legendSongTitle.move(-legendSongTitle.getWidth() / 2, 0);
         legendSongTitle.setBackgroundColor(Color.WHITE);
         window.addShape(legendSongTitle);
-        
+
         TextShape legendHeards = new TextShape(legendStartX + legendWidth / 2
             - divHeight / 2, 400 + divHeight / 2, "Heards");
         legendHeards.move(-legendHeards.getWidth() - 5, 0);
@@ -242,5 +249,79 @@ public class GUIwindow {
         legendOutline.setBackgroundColor(Color.WHITE);
         window.addShape(legendOutline);
 
+    }
+
+
+    /**
+     * Sorts the songs by alphabetical order according to their titles
+     * 
+     * @param titleButton
+     *            The button that sorts the songs by title
+     */
+    public void clickedTitle(Button titleButton) {
+        songs.sortSongs(SortTypeEnum.title);
+    }
+
+
+    public void clickedHobby(Button hobbyButton) {
+        Iterator<Song> it = songs.iterator();
+        while (it.hasNext()) {
+            Song currentSong = it.next();
+            HashMap<String, int[]> resultHobby = Solver.solve(currentSong,
+                "hobby");
+            int[] reading = resultHobby.get("reading");
+            double percentHeardReading = 0;
+            double percentLikedReading = 0;
+            int totalReading = reader.getTotalHobbies()[0];
+            if (reading != null && totalReading > 0) {
+                percentHeardReading = ((double) reading[0]/(double) totalReading) * 100;
+                Math.round(percentHeardReading);
+                percentLikedReading = ((double) reading[1]/(double) totalReading) * 100;
+                Math.round(percentLikedReading);
+            }
+            int[] art = resultHobby.get("art");
+            double percentHeardArt = 0;
+            double percentLikedArt = 0;
+            int totalArt = reader.getTotalHobbies()[1];
+            if (art != null && totalArt > 0)
+            {
+                percentHeardArt = ((double) art[0]/(double) totalArt) * 100;
+                Math.round(percentHeardArt);
+                percentLikedArt = ((double) art[1]/(double) totalArt) * 100;
+                Math.round(percentLikedArt);
+            }
+            int[] sports = resultHobby.get("sports");
+            double percentHeardSports = 0;
+            double percentLikedSports = 0;
+            int totalSports = reader.getTotalHobbies()[2];
+            if (sports != null && totalSports > 0)
+            {
+                percentHeardSports = ((double) sports[0]/(double) totalSports) * 100;
+                Math.round(percentHeardSports);
+                percentLikedSports = ((double) sports[1]/(double) totalSports) * 100;
+                Math.round(percentLikedSports);
+            }
+            int[] music = resultHobby.get("music");
+            double percentHeardMusic = 0;
+            double percentLikedMusic = 0;
+            int totalMusic = reader.getTotalHobbies()[3];
+            if (music != null)
+            {
+                percentHeardMusic = ((double) music[0]/ (double) totalMusic) * 100;
+                percentLikedMusic = ((double) music[1]/ (double) totalMusic) * 100;
+            }
+
+            System.out.println(currentSong.toString());
+            System.out.println("Heard");
+            System.out.println("reading:" + (int) percentHeardReading + " art:"
+                + (int) percentHeardArt + " sports:" + (int) percentHeardSports + " music:"
+                + (int) percentHeardMusic);
+            System.out.println("Likes");
+            System.out.println("reading:" + (int) percentLikedReading + " art:"
+                + (int) percentLikedArt + " sports:" + (int) percentLikedSports + " music:"
+                + (int) percentLikedMusic);
+            System.out.println("");
+
+        }
     }
 }

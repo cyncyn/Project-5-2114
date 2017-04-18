@@ -19,6 +19,9 @@ public class Reader {
     // ~ Fields---------------------
     private SongList songs;
     private StudentList students;
+    private int[] hobbies;
+    private int[] regions;
+    private int[] majors;
 
 
     // ~ Constructor------------------
@@ -31,16 +34,19 @@ public class Reader {
      *            The name of the file containing the student information
      */
     public Reader(String studentFile, String songFile) {
+        hobbies = new int[4];
+        regions = new int[4];
+        majors = new int[4];
+        for (int i = 0; i < 4; i++)
+        {
+            hobbies[i] = 0;
+            regions[i] = 0;
+            majors[i] = 0;
+        }
         SongList songList = readSongs(songFile);
         StudentList studentList = readStudents(studentFile);
-        songList.sortSongs(SortTypeEnum.title);
-        System.out.println(songList);
-        System.out.println("heard\nreading0 art0 sports50 music0");
-        System.out.println("likes\nreading0 art0 sports50 music100");
-        System.out.println("\n" + songList);
-        System.out.println("heard\nreading0 art0 sports50 music0");
-        System.out.println("likes\nreading0 art0 sports50 music100");
-        new GUIwindow(songList, studentList);
+        System.out.println("BREAK");
+        new GUIwindow(songList, studentList, this);
     }
 
 
@@ -107,18 +113,25 @@ public class Reader {
         while (file.hasNextLine()) {
             String studentInfo = file.nextLine();
             String[] info = studentInfo.split(",");
-            Student student = new Student(info[2], info[3], info[4]);
-            students.add(student);
-            Iterator<Song> iter = songs.iterator();
-            for (int i = 5; i < info.length; i++) {
-                Song currSong = iter.next();
-                if (info[i].equals("Yes")) {
-                    currSong.addToHeards(student);
-                }
-                i++;
 
-                if (info[i].equals("Yes") && info[i - 1].equals("Yes")) {
-                    currSong.addToLikes(student);
+            if (info.length > 5) {
+                Student student = new Student(info[2], info[3], info[4]);
+                students.add(student);
+                countAttributes(student);
+                Iterator<Song> iter = songs.iterator();
+                for (int i = 5; i < info.length; i++) {
+                    Song currSong = iter.next();
+                    if (info[i].equals("Yes")) {
+                        currSong.addToHeards(student);
+                    }
+                    i++;
+
+                    if (i < info.length && info[i].equals("Yes")) { // && info[i
+                                                                    // -
+                                                                    // 1].equals("Yes"))
+                                                                    // {
+                        currSong.addToLikes(student);
+                    }
                 }
 
             }
@@ -126,5 +139,94 @@ public class Reader {
 
         return students;
     }
+    
+    /**
+     * keeps a total of how many students have 
+     * each type of attribute in order to 
+     * calculate the percentages later
+     * @param s Student to be analyzed
+     */
+    private void countAttributes(Student s)
+    {
+        // for hobbies
+        if (s.getHobby().equals("reading"))
+        {
+            hobbies[0]++;
+        }
+        else if (s.getHobby().equals("art"))
+        {
+            hobbies[1]++;
+        }
+        else if (s.getHobby().equals("sports"))
+        {
+            hobbies[2]++;
+        }
+        else if (s.getHobby().equals("music"))
+        {
+            hobbies[3]++;
+        }
+        
+        // for major
+        if (s.getMajor().equals("Computer Science"))
+        {
+            majors[0]++;
+        }
+        else if (s.getMajor().equals("Other Engineering"))
+        {
+            majors[1]++;
+        }
+        else if (s.getMajor().equals("Math or CMDA"))
+        {
+            majors[2]++;
+        }
+        else if (s.getMajor().equals("Other"))
+        {
+            majors[3]++;
+        }
+        
+        // for state
+        if (s.getRegion().equals("Northeast"))
+        {
+            regions[0]++;
+        }
+        else if (s.getRegion().equals("Southeast"))
+        {
+            regions[1]++;
+        }
+        else if (s.getRegion().contains("other"))
+        {
+            regions[2]++;
+        }
+        else if (s.getRegion().contains("Outside"))
+        {
+            regions[3]++;
+        }
+    }
+    
+    /**
+     * @return the total number of students
+     * that have each specific hobby
+     */
+    public int[] getTotalHobbies()
+    {
+        return hobbies;
+    }
+    
+    /**
+     * @return the total number of students
+     * that have each specific major
+     */
+    public int[] getTotalMajors()
+    {
+        return majors;
+    }
+    
+    /**
+     * @return the total number of students
+     * that have each specific region
+     */
+    public int[] getTotalRegions()
+    {
+        return regions;
+    }
 }
-
