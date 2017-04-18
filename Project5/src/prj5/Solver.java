@@ -1,4 +1,3 @@
-
 package prj5;
 
 import java.util.HashMap;
@@ -13,6 +12,15 @@ import java.util.Iterator;
  *
  */
 public class Solver {
+    // ~ Constructor------------------
+    /**
+     * Intentionally left empty
+     */
+    public Solver() {
+        // Intentionally left empty
+    }
+
+
     // ~ Methods------------------
     /**
      * takes in a song and a student attribute (hobby, major, or region) and

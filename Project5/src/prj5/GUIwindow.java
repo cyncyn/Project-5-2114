@@ -56,6 +56,8 @@ public class GUIwindow {
 
         setUpWindow();
 
+        clickedGenre(genreButton);
+        clickedHobby(hobbyButton);
         clickedTitle(titleButton);
         clickedHobby(hobbyButton);
     }
@@ -263,63 +265,95 @@ public class GUIwindow {
     }
 
 
+    /**
+     * Sorts the songs by alphabetical order according to their titles
+     * 
+     * @param titleButton
+     *            The button that sorts the songs by title
+     */
+    public void clickedGenre(Button genreButton) {
+        songs.sortSongs(SortTypeEnum.genre);
+    }
+
+
     public void clickedHobby(Button hobbyButton) {
         Iterator<Song> it = songs.iterator();
         while (it.hasNext()) {
             Song currentSong = it.next();
             HashMap<String, int[]> resultHobby = Solver.solve(currentSong,
                 "hobby");
+            // Reading
             int[] reading = resultHobby.get("reading");
             double percentHeardReading = 0;
             double percentLikedReading = 0;
-            int totalReading = reader.getTotalHobbies()[0];
-            if (reading != null && totalReading > 0) {
-                percentHeardReading = ((double) reading[0]/(double) totalReading) * 100;
+            int totalReadingHeards = currentSong.getHobbiesHeards()[0];
+            int totalReadingLikes = currentSong.getHobbiesLikes()[0];
+            if (reading != null && totalReadingHeards > 0) {
+                percentHeardReading = ((double)reading[0]
+                    / (double)totalReadingHeards) * 100;
                 Math.round(percentHeardReading);
-                percentLikedReading = ((double) reading[1]/(double) totalReading) * 100;
+            }
+            if (reading != null && totalReadingLikes > 0) {
+                percentLikedReading = ((double)reading[1]
+                    / (double)totalReadingLikes) * 100;
                 Math.round(percentLikedReading);
             }
+            // Art
             int[] art = resultHobby.get("art");
             double percentHeardArt = 0;
             double percentLikedArt = 0;
-            int totalArt = reader.getTotalHobbies()[1];
-            if (art != null && totalArt > 0)
-            {
-                percentHeardArt = ((double) art[0]/(double) totalArt) * 100;
+            int totalArtHeards = currentSong.getHobbiesHeards()[1];
+            int totalArtLikes = currentSong.getHobbiesLikes()[1];
+            if (art != null && totalArtHeards > 0) {
+                percentHeardArt = ((double)art[0] / (double)totalArtHeards)
+                    * 100;
                 Math.round(percentHeardArt);
-                percentLikedArt = ((double) art[1]/(double) totalArt) * 100;
+            }
+            if (art != null && totalArtLikes > 0) {
+                percentLikedArt = ((double)art[1] / (double)totalArtLikes)
+                    * 100;
                 Math.round(percentLikedArt);
             }
+            // Sports
             int[] sports = resultHobby.get("sports");
             double percentHeardSports = 0;
             double percentLikedSports = 0;
-            int totalSports = reader.getTotalHobbies()[2];
-            if (sports != null && totalSports > 0)
-            {
-                percentHeardSports = ((double) sports[0]/(double) totalSports) * 100;
+            int totalSportsHeards = currentSong.getHobbiesHeards()[2];
+            int totalSportsLikes = currentSong.getHobbiesLikes()[2];
+            if (sports != null && totalSportsHeards > 0) {
+                percentHeardSports = ((double)sports[0]
+                    / (double)totalSportsHeards) * 100;
                 Math.round(percentHeardSports);
-                percentLikedSports = ((double) sports[1]/(double) totalSports) * 100;
+            }
+            if (sports != null && totalSportsLikes > 0) {
+                percentLikedSports = ((double)sports[1]
+                    / (double)totalSportsLikes) * 100;
                 Math.round(percentLikedSports);
             }
+            // Music
             int[] music = resultHobby.get("music");
             double percentHeardMusic = 0;
             double percentLikedMusic = 0;
-            int totalMusic = reader.getTotalHobbies()[3];
-            if (music != null)
-            {
-                percentHeardMusic = ((double) music[0]/ (double) totalMusic) * 100;
-                percentLikedMusic = ((double) music[1]/ (double) totalMusic) * 100;
+            int totalMusicHeards = currentSong.getHobbiesHeards()[3];
+            int totalMusicLikes = currentSong.getHobbiesLikes()[3];
+            if (music != null && totalMusicHeards > 0) {
+                percentHeardMusic = ((double)music[0]
+                    / (double)totalMusicHeards) * 100;
+            }
+            if (music != null && totalMusicLikes > 0) {
+                percentLikedMusic = ((double)music[1] / (double)totalMusicLikes)
+                    * 100;
             }
 
             System.out.println(currentSong.toString());
             System.out.println("Heard");
-            System.out.println("reading:" + (int) percentHeardReading + " art:"
-                + (int) percentHeardArt + " sports:" + (int) percentHeardSports + " music:"
-                + (int) percentHeardMusic);
+            System.out.println("reading:" + (int)percentHeardReading + " art:"
+                + (int)percentHeardArt + " sports:" + (int)percentHeardSports
+                + " music:" + (int)percentHeardMusic);
             System.out.println("Likes");
-            System.out.println("reading:" + (int) percentLikedReading + " art:"
-                + (int) percentLikedArt + " sports:" + (int) percentLikedSports + " music:"
-                + (int) percentLikedMusic);
+            System.out.println("reading:" + (int)percentLikedReading + " art:"
+                + (int)percentLikedArt + " sports:" + (int)percentLikedSports
+                + " music:" + (int)percentLikedMusic);
             System.out.println("");
 
         }

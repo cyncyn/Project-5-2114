@@ -1,16 +1,19 @@
+
 package prj5;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import student.TestCase;
-
+/**
+ * tests the method of the SongList class
+ * 
+ * @author lchar16
+ * @version 2017.04.14
+ *
+ */
 public class SongListTest extends TestCase {
 
     // ~ Fields--------------------
-    private Student charlie;
-    private Student cynthia;
-    private Student vikram;
-    private Student mitchell;
     private Song perfect;
     private Song closer;
     private Song royals;
@@ -28,10 +31,10 @@ public class SongListTest extends TestCase {
      * and 7 songs that are added to the list
      */
     public void setUp() {
-        charlie = new Student("ME", "Thailand", "squatting");
-        cynthia = new Student("CS", "China", "coughing");
-        mitchell = new Student("CS", "NOVA", "kungfu fighting");
-        vikram = new Student("Bio", "Little Asia", "eating");
+        Student charlie = new Student("ME", "Thailand", "squatting");
+        Student cynthia = new Student("CS", "China", "coughing");
+        Student mitchell = new Student("CS", "NOVA", "kungfu fighting");
+        Student vikram = new Student("Bio", "Little Asia", "eating");
 
         perfect = new Song("Perfect", "Ed Sheeran", 2017, "Pop");
         perfect.addToHeards(charlie);
@@ -90,6 +93,15 @@ public class SongListTest extends TestCase {
         list.add(irresistible);
         assertEquals(8, list.getSize());
 
+        Exception exception;
+        exception = null;
+        try {
+            list.add(null);
+        }
+        catch (IllegalArgumentException e) {
+            exception = e;
+        }
+        assertTrue(exception instanceof IllegalArgumentException);
     }
 
 
@@ -108,6 +120,9 @@ public class SongListTest extends TestCase {
      * tests if this method clears the list correctly
      */
     public void testClear() {
+        SongList list2 = new SongList();
+        list2.clear();
+        assertEquals(0, list2.getSize());
         assertEquals(7, list.getSize());
         list.clear();
         assertTrue(list.isEmpty());
@@ -171,6 +186,11 @@ public class SongListTest extends TestCase {
      * for each type of sort
      */
     public void testSortSongs() {
+        SongList list2 = new SongList();
+        assertNull(list2.sortSongs(SortTypeEnum.title));
+        list2.add(closer);
+        assertEquals(closer, list2.sortSongs(SortTypeEnum.title).getData());
+
         // Sort by title
         list.sortSongs(SortTypeEnum.title);
         assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Closer\n"
@@ -241,6 +261,42 @@ public class SongListTest extends TestCase {
             + "Song Year: 2017\n" + "SONG 7 - Song Title: Perfect\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n", list.toString());
+
+        // Sort by genre
+        list.sortSongs(SortTypeEnum.genre);
+        assertEquals("Song List of 7 songs.\n"
+            + "SONG 1 - Song Title: Perfect\n" + "Song Artist: Ed Sheeran\n"
+            + "Song Genre: Pop\n" + "Song Year: 2017\n"
+            + "SONG 2 - Song Title: Dive\n" + "Song Artist: Ed Sheeran\n"
+            + "Song Genre: Pop\n" + "Song Year: 2017\n"
+            + "SONG 3 - Song Title: Starving\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
+            + "Song Year: 2015\n" + "SONG 4 - Song Title: Dont\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Year: 2015\n" + "SONG 5 - Song Title: Closer\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Year: 2015\n" + "SONG 6 - Song Title: Royals\n"
+            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
+            + "SONG 7 - Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
+            + "Song Genre: Pop\n" + "Song Year: 2010\n", list.toString());
+
+        // Sort by title for default case
+        list.sortSongs(SortTypeEnum.other);
+        assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Closer\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Year: 2015\n" + "SONG 2 - Song Title: Dive\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Year: 2017\n" + "SONG 3 - Song Title: Dont\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Year: 2015\n" + "SONG 4 - Song Title: Perfect\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Year: 2017\n" + "SONG 5 - Song Title: Royals\n"
+            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
+            + "SONG 6 - Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
+            + "Song Genre: Pop\n" + "Song Year: 2010\n"
+            + "SONG 7 - Song Title: Starving\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
+            + "Song Year: 2015\n", list.toString());
     }
 
 }

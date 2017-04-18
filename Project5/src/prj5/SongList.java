@@ -105,9 +105,9 @@ public class SongList {
     }
 
 
-    /*
+    /**
      * @return an Iterator object to iterate through
-     * the list of Songs
+     *         the list of Songs
      */
     public Iterator<Song> iterator() {
         return new SongIterator();
@@ -196,6 +196,15 @@ public class SongList {
                     previous = curr;
                     curr = curr.next();
                 }
+                break;
+            }
+            default: {
+                while ((curr != null) && (item.getTitle().compareTo(curr
+                    .getData().getTitle()) > 0)) {
+                    previous = curr;
+                    curr = curr.next();
+                }
+                break;
             }
         }
 
