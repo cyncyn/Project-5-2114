@@ -36,6 +36,11 @@ public class GUIwindow {
     private Shape[] likes;
     private Shape[] divs;
 
+    private TextShape legendAttribute1;
+    private TextShape legendAttribute2;
+    private TextShape legendAttribute3;
+    private TextShape legendAttribute4;
+
     private SongList songs;
     private StudentList students;
     private Reader reader;
@@ -224,26 +229,26 @@ public class GUIwindow {
         legendLikes.setBackgroundColor(Color.WHITE);
         window.addShape(legendLikes);
 
-        TextShape legendAttribute1 = new TextShape(legendStartX + legendWidth
-            / 2, legendStartY + 50, "Attribute 1", Color.MAGENTA);
+        legendAttribute1 = new TextShape(legendStartX + legendWidth / 2 - 15,
+            legendStartY + 50, "Attribute 1", Color.MAGENTA);
         legendAttribute1.move(-legendAttribute1.getWidth() / 2, 0);
         legendAttribute1.setBackgroundColor(Color.WHITE);
         window.addShape(legendAttribute1);
 
-        TextShape legendAttribute2 = new TextShape(legendStartX + legendWidth
-            / 2, legendStartY + 75, "Attribute 2", Color.BLUE);
+        legendAttribute2 = new TextShape(legendStartX + legendWidth / 2 - 15,
+            legendStartY + 75, "Attribute 2", Color.BLUE);
         legendAttribute2.move(-legendAttribute2.getWidth() / 2, 0);
         legendAttribute2.setBackgroundColor(Color.WHITE);
         window.addShape(legendAttribute2);
 
-        TextShape legendAttribute3 = new TextShape(legendStartX + legendWidth
-            / 2, legendStartY + 100, "Attribute 3", Color.YELLOW);
+        legendAttribute3 = new TextShape(legendStartX + legendWidth / 2 - 15,
+            legendStartY + 100, "Attribute 3", Color.YELLOW);
         legendAttribute3.move(-legendAttribute3.getWidth() / 2, 0);
         legendAttribute3.setBackgroundColor(Color.WHITE);
         window.addShape(legendAttribute3);
 
-        TextShape legendAttribute4 = new TextShape(legendStartX + legendWidth
-            / 2, legendStartY + 125, "Attribute 4", Color.GREEN);
+        legendAttribute4 = new TextShape(legendStartX + legendWidth / 2 - 15,
+            legendStartY + 125, "Attribute 4", Color.GREEN);
         legendAttribute4.move(-legendAttribute4.getWidth() / 2, 0);
         legendAttribute4.setBackgroundColor(Color.WHITE);
         window.addShape(legendAttribute4);
@@ -279,12 +284,16 @@ public class GUIwindow {
         setUpWindow();
         songs.sortSongs(SortTypeEnum.title);
         displayNewSortedSongs();
-
+        if (isClear) {
+            clickedHobby(hobbyButton);
+            isClear = false;
+        }
         switch (lastCalled) {
             case "hobby":
                 clickedHobby(hobbyButton);
                 break;
             case "region":
+                clickedRegion(regionButton);
                 break;
             case "major":
                 clickedMajor(majorButton);
@@ -307,12 +316,16 @@ public class GUIwindow {
         setUpWindow();
         songs.sortSongs(SortTypeEnum.genre);
         displayNewSortedSongs();
-
+        if (isClear) {
+            clickedHobby(hobbyButton);
+            isClear = false;
+        }
         switch (lastCalled) {
             case "hobby":
                 clickedHobby(hobbyButton);
                 break;
             case "region":
+                clickedRegion(regionButton);
                 break;
             case "major":
                 clickedMajor(majorButton);
@@ -334,12 +347,16 @@ public class GUIwindow {
         setUpWindow();
         songs.sortSongs(SortTypeEnum.year);
         displayNewSortedSongs();
-
+        if (isClear) {
+            clickedHobby(hobbyButton);
+            isClear = false;
+        }
         switch (lastCalled) {
             case "hobby":
                 clickedHobby(hobbyButton);
                 break;
             case "region":
+                clickedRegion(regionButton);
                 break;
             case "major":
                 clickedMajor(majorButton);
@@ -361,13 +378,16 @@ public class GUIwindow {
         setUpWindow();
         songs.sortSongs(SortTypeEnum.artist);
         displayNewSortedSongs();
-
+        if (isClear) {
+            clickedHobby(hobbyButton);
+            isClear = false;
+        }
         switch (lastCalled) {
             case "hobby":
                 clickedHobby(hobbyButton);
                 break;
             case "region":
-
+                clickedRegion(regionButton);
                 break;
             case "major":
                 clickedMajor(majorButton);
@@ -493,12 +513,17 @@ public class GUIwindow {
      *            wants to represent the likes and heards by hobby
      */
     public void clickedHobby(Button hobbyButton) {
-        /*
-         * if (isClear) {
-         * clickedTitle(titleButton);
-         * isClear = false;
-         * }
-         */
+
+        if (isClear) {
+            isClear = false;
+            lastCalled = "hobby";
+            clickedTitle(titleButton);
+        }
+
+        legendAttribute1.setText("Reading");
+        legendAttribute2.setText("Art");
+        legendAttribute3.setText("Sports");
+        legendAttribute4.setText("Music");
 
         Iterator<Song> it = songs.iterator();
         int i = 0;
@@ -599,12 +624,15 @@ public class GUIwindow {
      *            wants to represent the likes and heards by major
      */
     public void clickedMajor(Button majorButton) {
-        /*
-         * if (isClear) {
-         * clickedTitle(titleButton);
-         * isClear = false;
-         * }
-         */
+        if (isClear) {
+            isClear = false;
+            lastCalled = "major";
+            clickedTitle(titleButton);
+        }
+        legendAttribute1.setText("CS");
+        legendAttribute2.setText("Other Engineering");
+        legendAttribute3.setText("Math");
+        legendAttribute4.setText("Other");
 
         Iterator<Song> it = songs.iterator();
         int i = 0;
@@ -689,6 +717,112 @@ public class GUIwindow {
             System.out.println("Likes");
             System.out.println("CS:" + (int)percentLikedCS + " Enge:"
                 + (int)percentLikedEnge + " math:" + (int)percentLikedMath
+                + " other:" + (int)percentLikedOther);
+            System.out.println("");
+
+        }
+    }
+
+
+    /**
+     * 
+     * @param majorButton
+     *            the button that indicates the user
+     *            wants to represent the likes and heards by major
+     */
+    public void clickedRegion(Button regionButton) {
+        if (isClear) {
+            isClear = false;
+            lastCalled = "region";
+            clickedTitle(titleButton);
+        }
+        legendAttribute1.setText("Northeast US");
+        legendAttribute2.setText("Southeast US");
+        legendAttribute3.setText("The rest of the US");
+        legendAttribute4.setText("Outside the US");
+        
+        Iterator<Song> it = songs.iterator();
+        int i = 0;
+        while (it.hasNext()) {
+            Song currentSong = it.next();
+            HashMap<String, int[]> resultRegion = Solver.solve(currentSong,
+                "region");
+            // Northeast US
+            int[] NE = resultRegion.get("Northeast");
+            double percentHeardNE = 0;
+            double percentLikedNE = 0;
+            int totalNEHeards = currentSong.getRegionsHeards()[0];
+            int totalNELikes = currentSong.getRegionsLikes()[0];
+            if (NE != null && totalNEHeards > 0) {
+                percentHeardNE = ((double)NE[0] / (double)totalNEHeards) * 100;
+                Math.round(percentHeardNE);
+            }
+            if (NE != null && totalNELikes > 0) {
+                percentLikedNE = ((double)NE[1] / (double)totalNELikes) * 100;
+                Math.round(percentLikedNE);
+            }
+            // Southeast US
+            int[] SE = resultRegion.get("Southeast");
+            double percentHeardSE = 0;
+            double percentLikedSE = 0;
+            int totalSEHeards = currentSong.getRegionsHeards()[1];
+            int totalSELikes = currentSong.getRegionsLikes()[1];
+            if (SE != null && totalSEHeards > 0) {
+                percentHeardSE = ((double)SE[0] / (double)totalSEHeards) * 100;
+                Math.round(percentHeardSE);
+            }
+            if (SE != null && totalSELikes > 0) {
+                percentLikedSE = ((double)SE[1] / (double)totalSELikes) * 100;
+                Math.round(percentLikedSE);
+            }
+            // the rest of US
+            int[] rest = resultRegion.get(
+                "United States (other than Southeast or Northwest)");
+            double percentHeardRest = 0;
+            double percentLikedRest = 0;
+            int totalRestHeards = currentSong.getRegionsHeards()[2];
+            int totalRestLikes = currentSong.getRegionsLikes()[2];
+            if (rest != null && totalRestHeards > 0) {
+                percentHeardRest = ((double)rest[0] / (double)totalRestHeards)
+                    * 100;
+                Math.round(percentHeardRest);
+            }
+            if (rest != null && totalRestLikes > 0) {
+                percentLikedRest = ((double)rest[1] / (double)totalRestLikes)
+                    * 100;
+                Math.round(percentLikedRest);
+            }
+            // outside of US
+            int[] other = resultRegion.get("Outside of United States");
+            double percentHeardOther = 0;
+            double percentLikedOther = 0;
+            int totalOtherHeards = currentSong.getRegionsHeards()[3];
+            int totalOtherLikes = currentSong.getRegionsLikes()[3];
+            if (other != null && totalOtherHeards > 0) {
+                percentHeardOther = ((double)other[0]
+                    / (double)totalOtherHeards) * 100;
+            }
+            if (other != null && totalOtherLikes > 0) {
+                percentLikedOther = ((double)other[1] / (double)totalOtherLikes)
+                    * 100;
+            }
+
+            displayHeardBars(i, (int)percentHeardNE, (int)percentHeardSE,
+                (int)percentHeardRest, (int)percentHeardOther);
+            displayLikedBars(i, (int)percentLikedNE, (int)percentLikedSE,
+                (int)percentLikedRest, (int)percentLikedOther);
+            i = i + 4;
+
+            lastCalled = "region";
+
+            System.out.println(currentSong.toString());
+            System.out.println("Heard");
+            System.out.println("NE:" + (int)percentHeardNE + " SE:"
+                + (int)percentHeardSE + " Other US:" + (int)percentHeardRest
+                + " other:" + (int)percentHeardOther);
+            System.out.println("Likes");
+            System.out.println("NE:" + (int)percentLikedNE + " SE:"
+                + (int)percentLikedSE + " Other US:" + (int)percentLikedRest
                 + " other:" + (int)percentLikedOther);
             System.out.println("");
 
