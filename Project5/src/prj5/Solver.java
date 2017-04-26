@@ -12,6 +12,15 @@ import java.util.Iterator;
  *
  */
 public class Solver {
+    // ~ Constructor------------------
+    /**
+     * Intentionally left empty
+     */
+    public Solver() {
+        // Intentionally left empty
+    }
+
+
     // ~ Methods------------------
     /**
      * takes in a song and a student attribute (hobby, major, or region) and
@@ -65,6 +74,7 @@ public class Solver {
                 heardsAndLikes[1] = 1; // updates number of likes
             }
             else {
+
                 heardsAndLikes = result.get(specificAttr);
                 heardsAndLikes[1] += 1; // updates number of likes
             }

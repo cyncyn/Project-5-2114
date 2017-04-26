@@ -1,3 +1,4 @@
+
 package prj5;
 
 /**
@@ -16,6 +17,7 @@ public class Input {
      *            file containing students and songs
      */
     public static void main(String[] args) {
-        new Reader(args[0], args[1]);
+        // new Reader(args[0], args[1]);
+        new Reader("MusicSurveyData2017S.csv", "SongList2017S.csv");
     }
 }

@@ -19,22 +19,19 @@ public class SolverTest extends student.TestCase {
 
     private Song song;
 
-    private Student cynthia;
-    private Student charlie;
-    private Student mitchell;
-    private Student vikram;
-
 
     /**
      * sets up each test method before it runs
      */
     public void setUp() {
+        new Solver();
         song = new Song("Perfect", "Ed Seeran", 2017, "pop");
 
-        cynthia = new Student("CS", "NOVA", "coughing");
-        charlie = new Student("ME", "Thailand", "squatting");
-        mitchell = new Student("CS", "NOVA", "kungfu fighting");
-        vikram = new Student("Bio", "Little Asia", "eating");
+        Student cynthia = new Student("CS", "NOVA", "coughing");
+        Student charlie = new Student("ME", "Thailand", "squatting");
+        Student mitchell = new Student("CS", "NOVA", "kungfu fighting");
+        Student vikram = new Student("Bio", "Little Asia", "eating");
+        Student stupid = new Student("None", "Nowhere", "nothing");
 
         song.addToHeards(cynthia);
         song.addToHeards(charlie);
@@ -43,6 +40,7 @@ public class SolverTest extends student.TestCase {
 
         song.addToLikes(cynthia);
         song.addToLikes(charlie);
+        song.addToLikes(stupid);
 
         // creates the HashMap with majors as keys
         testMajor = new HashMap<>();
@@ -61,6 +59,11 @@ public class SolverTest extends student.TestCase {
         heardsLikes[1] = 0;
         testMajor.put("Bio", heardsLikes);
 
+        heardsLikes = new int[2];
+        heardsLikes[0] = 0;
+        heardsLikes[1] = 1;
+        testMajor.put("None", heardsLikes);
+
         // creates the HashMap with regions as keys
         testRegion = new HashMap<>();
         heardsLikes = new int[2];
@@ -77,6 +80,11 @@ public class SolverTest extends student.TestCase {
         heardsLikes[0] = 1;
         heardsLikes[1] = 0;
         testRegion.put("Little Asia", heardsLikes);
+
+        heardsLikes = new int[2];
+        heardsLikes[0] = 0;
+        heardsLikes[1] = 1;
+        testRegion.put("Nowhere", heardsLikes);
 
         // creates the HashMap with hobbies as keys
         testHobby = new HashMap<>();
@@ -99,6 +107,11 @@ public class SolverTest extends student.TestCase {
         heardsLikes[0] = 1;
         heardsLikes[1] = 0;
         testHobby.put("eating", heardsLikes);
+
+        heardsLikes = new int[2];
+        heardsLikes[0] = 0;
+        heardsLikes[1] = 1;
+        testHobby.put("nothing", heardsLikes);
     }
 
 
@@ -113,8 +126,6 @@ public class SolverTest extends student.TestCase {
 
         while (itMajor.hasNext()) {
             String key = itMajor.next();
-            System.out.println(testMajor.get(key)[0]);
-            System.out.println(resultMajor.get(key)[0]);
             assertTrue(Arrays.equals(testMajor.get(key), resultMajor.get(key)));
 
         }

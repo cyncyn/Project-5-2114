@@ -15,6 +15,7 @@ public class SongList {
 
     // ~ Fields------------------------
     private Node<Song> firstSong;
+    private Node<Song> lastSong;
     private int size;
 
 
@@ -25,6 +26,7 @@ public class SongList {
     public SongList() {
         size = 0;
         firstSong = null;
+        lastSong = null;
     }
 
 
@@ -41,12 +43,13 @@ public class SongList {
         }
 
         if (isEmpty()) {
-            firstSong = new Node<Song>(newSong);
+            lastSong = new Node<Song>(newSong);
+            firstSong = lastSong;
         }
         else {
             Node<Song> song = new Node<Song>(newSong);
-            song.setNext(firstSong);
-            firstSong = song;
+            lastSong.setNext(song);
+            lastSong = song;
         }
         size++;
     }
@@ -77,6 +80,7 @@ public class SongList {
         if (firstSong != null) {
             firstSong.setNext(null);
             firstSong = null;
+            lastSong = null;
             size = 0;
         }
     }
@@ -102,8 +106,6 @@ public class SongList {
 
 
     /**
-     * iterator for the SongList
-     * 
      * @return an Iterator object to iterate through
      *         the list of Songs
      */
@@ -194,6 +196,15 @@ public class SongList {
                     previous = curr;
                     curr = curr.next();
                 }
+                break;
+            }
+            default: {
+                while ((curr != null) && (item.getTitle().compareTo(curr
+                    .getData().getTitle()) > 0)) {
+                    previous = curr;
+                    curr = curr.next();
+                }
+                break;
             }
         }
 

@@ -18,6 +18,9 @@ public class StudentList {
 
 
     // ~ Constructor------------------
+    /**
+     * Creates a new empty StudentList
+     */
     public StudentList() {
         firstNode = null;
         size = 0;

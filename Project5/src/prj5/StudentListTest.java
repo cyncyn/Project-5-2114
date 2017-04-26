@@ -1,6 +1,7 @@
 package prj5;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import student.TestCase;
 
 /**
@@ -53,7 +54,23 @@ public class StudentListTest extends TestCase {
         assertEquals(3, list.size());
         list.add(mitchell);
         assertEquals(4, list.size());
-        System.out.println(list.toString());
+        String test = "List of 4 Students.\n"
+            + "STUDENT 1 - Major: CS, Region: NOVA, Hobby: kungfu fighting.\n"
+            + "STUDENT 2 - Major: ME, Region: Thailand, Hobby: squatting.\n"
+            + "STUDENT 3 - Major: CS, Region: China, Hobby: coughing.\n"
+            + "STUDENT 4 - Major: Bio, Region: Little Asia, Hobby: eating.\n";
+        assertEquals(test, list.toString());
+
+        Exception exception;
+        exception = null;
+        try {
+            list.add(null);
+        }
+        catch (IllegalArgumentException e) {
+            exception = e;
+        }
+        assertTrue(exception instanceof IllegalArgumentException);
+
     }
 
 
@@ -83,6 +100,9 @@ public class StudentListTest extends TestCase {
      * tests if clear clears the list
      */
     public void testClear() {
+        list.clear();
+        assertEquals(0, list.size());
+
         list.add(charlie);
         list.add(vikram);
         list.add(cynthia);
@@ -104,6 +124,20 @@ public class StudentListTest extends TestCase {
     public void testToString() {
         String test = "List of 0 Students.\n";
         assertEquals(test, list.toString());
+        list.add(mitchell);
+        test = "List of 1 Students.\n"
+            + "STUDENT 1 - Major: CS, Region: NOVA, Hobby: kungfu fighting.\n";
+        assertEquals(test, list.toString());
+        list.add(charlie);
+        list.add(vikram);
+        list.add(cynthia);
+        test = "List of 4 Students.\n"
+            + "STUDENT 1 - Major: CS, Region: China, Hobby: coughing.\n"
+            + "STUDENT 2 - Major: Bio, Region: Little Asia, Hobby: eating.\n"
+            + "STUDENT 3 - Major: ME, Region: Thailand, Hobby: squatting.\n"
+            + "STUDENT 4 - Major: CS, Region: NOVA, Hobby: kungfu fighting.\n";
+        assertEquals(test, list.toString());
+
     }
 
 
@@ -127,6 +161,16 @@ public class StudentListTest extends TestCase {
         assertEquals(charlie, it2.next());
 
         assertFalse(it2.hasNext());
+
+        Exception exception;
+        exception = null;
+        try {
+            it2.next();
+        }
+        catch (NoSuchElementException e) {
+            exception = e;
+        }
+        assertTrue(exception instanceof NoSuchElementException);
     }
 
 }
