@@ -16,7 +16,6 @@ public class Input {
      *            file containing students and songs
      */
     public static void main(String[] args) {
-        new Reader("MusicSurveyData.csv", "SongList.csv");
-        
+        new Reader(args[0], args[1]);
     }
 }

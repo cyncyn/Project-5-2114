@@ -19,18 +19,22 @@ public class SolverTest extends student.TestCase {
 
     private Song song;
 
+    private Student cynthia;
+    private Student charlie;
+    private Student mitchell;
+    private Student vikram;
+
 
     /**
      * sets up each test method before it runs
      */
     public void setUp() {
-        new Solver();
         song = new Song("Perfect", "Ed Seeran", 2017, "pop");
 
-        Student cynthia = new Student("CS", "NOVA", "coughing");
-        Student charlie = new Student("ME", "Thailand", "squatting");
-        Student mitchell = new Student("CS", "NOVA", "kungfu fighting");
-        Student vikram = new Student("Bio", "Little Asia", "eating");
+        cynthia = new Student("CS", "NOVA", "coughing");
+        charlie = new Student("ME", "Thailand", "squatting");
+        mitchell = new Student("CS", "NOVA", "kungfu fighting");
+        vikram = new Student("Bio", "Little Asia", "eating");
 
         song.addToHeards(cynthia);
         song.addToHeards(charlie);

@@ -13,14 +13,13 @@ public class SongTest extends TestCase {
     // ~ Fields--------------------
     private Student charlie;
     private Student cynthia;
-    private Student cnr;
-    private Student osa;
-    private Student mos;
-    private Student oom;
+    private Student vikram;
+    private Student mitchell;
     private Song perfect;
     private Song closer;
     private Song royals;
     private Song smile;
+    private Song starving;
 
 
     /**
@@ -30,13 +29,8 @@ public class SongTest extends TestCase {
     public void setUp() {
         charlie = new Student("ME", "Thailand", "squatting");
         cynthia = new Student("CS", "China", "coughing");
-        Student mitchell = new Student("CS", "NOVA", "kungfu fighting");
-        Student vikram = new Student("Bio", "Little Asia", "eating");
-
-        cnr = new Student("Computer Science", "Northeast", "reading");
-        osa = new Student("Other Engineering", "Southeast", "art");
-        mos = new Student("Math or CMDA", "other", "sports");
-        oom = new Student("Other", "Outside", "music");
+        mitchell = new Student("CS", "NOVA", "kungfu fighting");
+        vikram = new Student("Bio", "Little Asia", "eating");
 
         perfect = new Song("Perfect", "Ed Sheeran", 2017, "Pop");
         perfect.addToHeards(charlie);
@@ -57,7 +51,7 @@ public class SongTest extends TestCase {
         royals.addToHeards(cynthia);
         royals.addToLikes(cynthia);
 
-        Song starving = new Song("Starving", "Hailee Steinfeld", 2015, "Pop");
+        starving = new Song("Starving", "Hailee Steinfeld", 2015, "Pop");
         starving.addToHeards(charlie);
         starving.addToLikes(charlie);
 
@@ -116,6 +110,7 @@ public class SongTest extends TestCase {
         assertEquals(1, royals.getLikes().size());
         royals.addToLikes(charlie);
         assertEquals(2, royals.getLikes().size());
+        System.out.println(royals.toString());
     }
 
 
@@ -128,65 +123,27 @@ public class SongTest extends TestCase {
 
 
     /**
+     * tests that likes returns the right list
+     */
+    public void testGetLikes() {
+        assertEquals(2, perfect.getLikes().size());
+    }
+
+
+    /**
      * tests if toString returns the right representation
      */
     public void testToString() {
-        String test = "Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
-            + "Song Genre: Pop\n" + "Song Year: 2010";
+        System.out.println(closer.toString());
+        System.out.println(royals.toString());
+        System.out.println(smile.toString());
+        System.out.println(starving.toString());
+        System.out.println(perfect.toString());
+
+        String test = "Smile(2010) by Uncle Kracker, Genre: Pop\n"
+            + "Students who have heard the song: List of 0 Students.\n"
+            + "Students who like the song: List of 0 Students.\n";
         assertEquals(test, smile.toString());
-        test = "Song Title: Closer\n" + "Song Artist: Chainsmokers\n"
-            + "Song Genre: Pop\n" + "Song Year: 2015";
-        assertEquals(test, closer.toString());
-    }
-
-
-    /**
-     * tests that the updateHeardsTotals method keeps a total of how many
-     * students have each type of attribute and have heard this song
-     */
-    public void testUpdateHeardTotals() {
-        perfect.updateHeardTotals(cnr);
-        assertEquals(1, perfect.getHobbiesHeards()[0]);
-        assertEquals(1, perfect.getMajorsHeards()[0]);
-        assertEquals(1, perfect.getRegionsHeards()[0]);
-        perfect.updateHeardTotals(osa);
-        assertEquals(1, perfect.getHobbiesHeards()[1]);
-        assertEquals(1, perfect.getMajorsHeards()[1]);
-        assertEquals(1, perfect.getRegionsHeards()[1]);
-        perfect.updateHeardTotals(mos);
-        assertEquals(1, perfect.getHobbiesHeards()[2]);
-        assertEquals(1, perfect.getMajorsHeards()[2]);
-        assertEquals(1, perfect.getRegionsHeards()[2]);
-        perfect.updateHeardTotals(oom);
-        assertEquals(1, perfect.getHobbiesHeards()[3]);
-        assertEquals(1, perfect.getMajorsHeards()[3]);
-        assertEquals(1, perfect.getRegionsHeards()[3]);
-        perfect.updateHeardTotals(charlie);
-    }
-
-
-    /**
-     * tests that the updateHeardsTotals method keeps a total of how many
-     * students have each type of attribute and have heard this song
-     */
-    public void testUpdateLikeTotals() {
-        perfect.updateLikeTotals(cnr);
-        assertEquals(1, perfect.getHobbiesLikes()[0]);
-        assertEquals(1, perfect.getMajorsLikes()[0]);
-        assertEquals(1, perfect.getRegionsLikes()[0]);
-        perfect.updateLikeTotals(osa);
-        assertEquals(1, perfect.getHobbiesLikes()[1]);
-        assertEquals(1, perfect.getMajorsLikes()[1]);
-        assertEquals(1, perfect.getRegionsLikes()[1]);
-        perfect.updateLikeTotals(mos);
-        assertEquals(1, perfect.getHobbiesLikes()[2]);
-        assertEquals(1, perfect.getMajorsLikes()[2]);
-        assertEquals(1, perfect.getRegionsLikes()[2]);
-        perfect.updateLikeTotals(oom);
-        assertEquals(1, perfect.getHobbiesLikes()[3]);
-        assertEquals(1, perfect.getMajorsLikes()[3]);
-        assertEquals(1, perfect.getRegionsLikes()[3]);
-        perfect.updateLikeTotals(charlie);
     }
 
 }
