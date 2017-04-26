@@ -32,6 +32,7 @@ public class GUIwindow {
     private Button previous;
     private Button quit;
     private TextShape[] titles;
+    private TextShape[] artists;
     private Shape[] heards;
     private Shape[] likes;
     private Shape[] divs;
@@ -42,8 +43,8 @@ public class GUIwindow {
     private TextShape legendAttribute4;
 
     private SongList songs;
-    private StudentList students;
-    private Reader reader;
+    //private StudentList students;
+    //private Reader reader;
     private String lastCalled;
     private boolean isClear;
     private int page;
@@ -59,8 +60,8 @@ public class GUIwindow {
         window = new Window("Project 5");
 
         songs = songList;
-        students = studentList;
-        reader = r;
+        //students = studentList;
+        //reader = r;
 
         setUpButtons();
         next.disable();
@@ -133,16 +134,21 @@ public class GUIwindow {
         int xinc = 250;
         int yinc = 180;
         titles = new TextShape[9];
+        artists = new TextShape[9];
         for (int i = 0; i < titles.length; i = i + 3) {
             for (int j = 0; j < 3; j++) {
                 titles[i + j] = new TextShape(startX + (j * xinc), startY + ((i
                     / 3) * yinc), "title" + (i + j));
+                artists[i + j] = new TextShape(startX + (j * xinc), startY + 20 + ((i
+                    / 3) * yinc), "artist" + (i + j));
             }
         }
         for (int i = 0; i < titles.length; i++) {
             window.addShape(titles[i]);
-            centerTitle(titles[i]);
+            window.addShape(artists[i]);
+            artists[i].setBackgroundColor(Color.WHITE);
             titles[i].setBackgroundColor(Color.WHITE);
+            centerTitle(titles[i], artists[i]);
         }
 
         int divStartX = 120;
@@ -273,11 +279,14 @@ public class GUIwindow {
     /**
      * centers the title
      */
-    private void centerTitle(TextShape title) {
+    private void centerTitle(TextShape title, TextShape artist) {
         int len = title.getText().length();
         int starting = title.getX();
         int newStart = starting - ((len / 2) * 5);
         title.setX(newStart);
+        int len2 = artist.getText().length();
+        int newStart2 = starting - ((len2 / 2) * 5);
+        artist.setX(newStart2);
 
     }
 
@@ -381,6 +390,7 @@ public class GUIwindow {
             int c = 9 - songs.getSize() % 9 + 1;
             while (c < 9) {
                 titles[c].setForegroundColor(Color.WHITE);
+                artists[c].setForegroundColor(Color.WHITE);
                 divs[c].setBackgroundColor(Color.WHITE);
                 divs[c].setForegroundColor(Color.WHITE);
                 c++;
@@ -391,13 +401,19 @@ public class GUIwindow {
         {
             currentSong = it.next();
             int titleShift = titles[i].getWidth() / 2;
+            int artistShift = artists[i].getWidth() / 2;
             titles[i].move(titleShift, 0);
             titles[i].setText(currentSong.getTitle());
             titles[i].setForegroundColor(Color.BLACK);
+            artists[i].move(artistShift, 0);
+            artists[i].setText(currentSong.getArtist());
+            artists[i].setForegroundColor(Color.BLACK);
             divs[i].setBackgroundColor(Color.BLACK);
             divs[i].setForegroundColor(Color.BLACK);
             titleShift = titles[i].getWidth() / 2;
+            artistShift = artists[i].getWidth() / 2;
             titles[i].move(-titleShift, 0);
+            artists[i].move(-artistShift, 0);
             // centerTitle(titles[i]);
             i++;
         }
@@ -677,7 +693,7 @@ public class GUIwindow {
                 percentLikedCS = ((double)CS[1] / (double)totalCSLikes) * 100;
                 Math.round(percentLikedCS);
             }
-            // other enginering
+            // other engineering
             int[] enge = resultMajor.get("Other Engineering");
             double percentHeardEnge = 0;
             double percentLikedEnge = 0;
