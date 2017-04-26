@@ -46,27 +46,27 @@ public class SongListTest extends TestCase {
         dive.addToHeards(charlie);
         dive.addToLikes(charlie);
 
-        dont = new Song("Dont", "Ed Sheeran", 2015, "Pop");
+        dont = new Song("Dont", "Ed Sheeran", 2015, "Rap");
         dont.addToHeards(charlie);
         dont.addToLikes(charlie);
 
-        closer = new Song("Closer", "Chainsmokers", 2015, "Pop");
+        closer = new Song("Closer", "Chainsmokers", 2015, "Hip hop");
         closer.addToHeards(charlie);
         closer.addToHeards(vikram);
         closer.addToHeards(mitchell);
         closer.addToHeards(cynthia);
         closer.addToLikes(charlie);
 
-        royals = new Song("Royals", "Lorde", 2014, "Pop");
+        royals = new Song("Royals", "Lorde", 2014, "Apple");
         royals.addToHeards(charlie);
         royals.addToHeards(cynthia);
         royals.addToLikes(cynthia);
 
-        starving = new Song("Starving", "Hailee Steinfeld", 2015, "Pop");
+        starving = new Song("Starving", "Hailee Steinfeld", 2015, "Jazz");
         starving.addToHeards(charlie);
         starving.addToLikes(charlie);
 
-        smile = new Song("Smile", "Uncle Kracker", 2010, "Pop");
+        smile = new Song("Smile", "Uncle Kracker", 2010, "Classical");
         smile.addToHeards(charlie);
 
         irresistible = new Song("Irresistible", "Fall Out Boy", 2015, "Rock");
