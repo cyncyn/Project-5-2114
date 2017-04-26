@@ -3,6 +3,7 @@ package prj5;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import student.TestCase;
+
 /**
  * tests the method of the SongList class
  * 
@@ -137,11 +138,11 @@ public class SongListTest extends TestCase {
         assertEquals("Song List of 0 songs.\n", testList.toString());
         testList.add(closer);
         assertEquals("Song List of 1 songs.\n" + "SONG 1 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
             + "Song Year: 2015\n", testList.toString());
         testList.add(dive);
         assertEquals("Song List of 2 songs.\n" + "SONG 1 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
             + "Song Year: 2015\n" + "SONG 2 - Song Title: Dive\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n", testList.toString());
@@ -193,108 +194,91 @@ public class SongListTest extends TestCase {
         // Sort by title
         list.sortSongs(SortTypeEnum.title);
         assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
             + "Song Year: 2015\n" + "SONG 2 - Song Title: Dive\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 3 - Song Title: Dont\n"
-            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Rap\n"
             + "Song Year: 2015\n" + "SONG 4 - Song Title: Perfect\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 5 - Song Title: Royals\n"
-            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
-            + "SONG 6 - Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
-            + "Song Genre: Pop\n" + "Song Year: 2010\n"
-            + "SONG 7 - Song Title: Starving\n"
-            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
+            + "Song Artist: Lorde\n" + "Song Genre: Apple\n"
+            + "Song Year: 2014\n" + "SONG 6 - Song Title: Smile\n"
+            + "Song Artist: Uncle Kracker\n" + "Song Genre: Classical\n"
+            + "Song Year: 2010\n" + "SONG 7 - Song Title: Starving\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Jazz\n"
             + "Song Year: 2015\n", list.toString());
 
         // Sort by artist
         list.sortSongs(SortTypeEnum.artist);
         assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
             + "Song Year: 2015\n" + "SONG 2 - Song Title: Dive\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 3 - Song Title: Dont\n"
-            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Rap\n"
             + "Song Year: 2015\n" + "SONG 4 - Song Title: Perfect\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 5 - Song Title: Starving\n"
-            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Jazz\n"
             + "Song Year: 2015\n" + "SONG 6 - Song Title: Royals\n"
-            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
-            + "SONG 7 - Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
-            + "Song Genre: Pop\n" + "Song Year: 2010\n", list.toString());
+            + "Song Artist: Lorde\n" + "Song Genre: Apple\n"
+            + "Song Year: 2014\n" + "SONG 7 - Song Title: Smile\n"
+            + "Song Artist: Uncle Kracker\n" + "Song Genre: Classical\n"
+            + "Song Year: 2010\n", list.toString());
 
         // Sort by genre
         list.sortSongs(SortTypeEnum.genre);
-        assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Smile\n"
-            + "Song Artist: Uncle Kracker\n" + "Song Genre: Pop\n"
-            + "Song Year: 2010\n" + "SONG 2 - Song Title: Royals\n"
-            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
-            + "SONG 3 - Song Title: Starving\n"
-            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
-            + "Song Year: 2015\n" + "SONG 4 - Song Title: Perfect\n"
+        assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Royals\n"
+            + "Song Artist: Lorde\n" + "Song Genre: Apple\n"
+            + "Song Year: 2014\n" + "SONG 2 - Song Title: Smile\n"
+            + "Song Artist: Uncle Kracker\n" + "Song Genre: Classical\n"
+            + "Song Year: 2010\n" + "SONG 3 - Song Title: Closer\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
+            + "Song Year: 2015\n" + "SONG 4 - Song Title: Starving\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Jazz\n"
+            + "Song Year: 2015\n" + "SONG 5 - Song Title: Perfect\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
-            + "Song Year: 2017\n" + "SONG 5 - Song Title: Dont\n"
+            + "Song Year: 2017\n" + "SONG 6 - Song Title: Dive\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
-            + "Song Year: 2015\n" + "SONG 6 - Song Title: Dive\n"
-            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
-            + "Song Year: 2017\n" + "SONG 7 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Year: 2017\n" + "SONG 7 - Song Title: Dont\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Rap\n"
             + "Song Year: 2015\n", list.toString());
 
         // Sort by year
         list.sortSongs(SortTypeEnum.year);
         assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Smile\n"
-            + "Song Artist: Uncle Kracker\n" + "Song Genre: Pop\n"
+            + "Song Artist: Uncle Kracker\n" + "Song Genre: Classical\n"
             + "Song Year: 2010\n" + "SONG 2 - Song Title: Royals\n"
-            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
-            + "SONG 3 - Song Title: Closer\n" + "Song Artist: Chainsmokers\n"
-            + "Song Genre: Pop\n" + "Song Year: 2015\n"
-            + "SONG 4 - Song Title: Dont\n" + "Song Artist: Ed Sheeran\n"
-            + "Song Genre: Pop\n" + "Song Year: 2015\n"
-            + "SONG 5 - Song Title: Starving\n"
-            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
+            + "Song Artist: Lorde\n" + "Song Genre: Apple\n"
+            + "Song Year: 2014\n" + "SONG 3 - Song Title: Dont\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Rap\n"
+            + "Song Year: 2015\n" + "SONG 4 - Song Title: Starving\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Jazz\n"
+            + "Song Year: 2015\n" + "SONG 5 - Song Title: Closer\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
             + "Song Year: 2015\n" + "SONG 6 - Song Title: Dive\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 7 - Song Title: Perfect\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n", list.toString());
 
-        // Sort by genre
-        list.sortSongs(SortTypeEnum.genre);
-        assertEquals("Song List of 7 songs.\n"
-            + "SONG 1 - Song Title: Perfect\n" + "Song Artist: Ed Sheeran\n"
-            + "Song Genre: Pop\n" + "Song Year: 2017\n"
-            + "SONG 2 - Song Title: Dive\n" + "Song Artist: Ed Sheeran\n"
-            + "Song Genre: Pop\n" + "Song Year: 2017\n"
-            + "SONG 3 - Song Title: Starving\n"
-            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
-            + "Song Year: 2015\n" + "SONG 4 - Song Title: Dont\n"
-            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
-            + "Song Year: 2015\n" + "SONG 5 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
-            + "Song Year: 2015\n" + "SONG 6 - Song Title: Royals\n"
-            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
-            + "SONG 7 - Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
-            + "Song Genre: Pop\n" + "Song Year: 2010\n", list.toString());
-
         // Sort by title for default case
         list.sortSongs(SortTypeEnum.other);
         assertEquals("Song List of 7 songs.\n" + "SONG 1 - Song Title: Closer\n"
-            + "Song Artist: Chainsmokers\n" + "Song Genre: Pop\n"
+            + "Song Artist: Chainsmokers\n" + "Song Genre: Hip hop\n"
             + "Song Year: 2015\n" + "SONG 2 - Song Title: Dive\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 3 - Song Title: Dont\n"
-            + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
+            + "Song Artist: Ed Sheeran\n" + "Song Genre: Rap\n"
             + "Song Year: 2015\n" + "SONG 4 - Song Title: Perfect\n"
             + "Song Artist: Ed Sheeran\n" + "Song Genre: Pop\n"
             + "Song Year: 2017\n" + "SONG 5 - Song Title: Royals\n"
-            + "Song Artist: Lorde\n" + "Song Genre: Pop\n" + "Song Year: 2014\n"
-            + "SONG 6 - Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
-            + "Song Genre: Pop\n" + "Song Year: 2010\n"
-            + "SONG 7 - Song Title: Starving\n"
-            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Pop\n"
+            + "Song Artist: Lorde\n" + "Song Genre: Apple\n"
+            + "Song Year: 2014\n" + "SONG 6 - Song Title: Smile\n"
+            + "Song Artist: Uncle Kracker\n" + "Song Genre: Classical\n"
+            + "Song Year: 2010\n" + "SONG 7 - Song Title: Starving\n"
+            + "Song Artist: Hailee Steinfeld\n" + "Song Genre: Jazz\n"
             + "Song Year: 2015\n", list.toString());
     }
 
