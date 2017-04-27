@@ -21,7 +21,7 @@ public class SongList {
 
     // ~ Constructor------------------
     /**
-     * new empty SongList
+     * Creates new empty SongList
      */
     public SongList() {
         size = 0;
@@ -56,6 +56,7 @@ public class SongList {
 
 
     /**
+     * Gets the size of the list
      * 
      * @return how many songs are in the list
      */
@@ -65,6 +66,7 @@ public class SongList {
 
 
     /**
+     * Returns whether or not the list is empty
      * 
      * @return whether or not the list is empty
      */
@@ -87,6 +89,8 @@ public class SongList {
 
 
     /**
+     * Returns a string of all the songs in the list
+     * 
      * @return a string of all songs in the list
      */
     public String toString() {
@@ -106,6 +110,8 @@ public class SongList {
 
 
     /**
+     * Creates a SongIterator to iterate through the songList
+     * 
      * @return an Iterator object to iterate through
      *         the list of Songs
      */

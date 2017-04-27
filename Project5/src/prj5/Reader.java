@@ -18,11 +18,6 @@ import java.util.Scanner;
 public class Reader {
     // ~ Fields---------------------
     private SongList songs;
-    /*
-     * private int[] hobbies;
-     * private int[] regions;
-     * private int[] majors;
-     */
 
 
     // ~ Constructor------------------
@@ -35,16 +30,6 @@ public class Reader {
      *            The name of the file containing the student information
      */
     public Reader(String studentFile, String songFile) {
-        /*
-         * hobbies = new int[4];
-         * regions = new int[4];
-         * majors = new int[4];
-         * for (int i = 0; i < 4; i++) {
-         * hobbies[i] = 0;
-         * regions[i] = 0;
-         * majors[i] = 0;
-         * }
-         */
         SongList songList = readSongs(songFile);
         StudentList studentList = readStudents(studentFile);
         new GUIwindow(songList, studentList, this);
@@ -131,8 +116,6 @@ public class Reader {
                     i++;
 
                     if (i < info.length && info[i].equals("Yes")) {
-                        // && info[i-1].equals("Yes")){
-
                         currSong.addToLikes(student);
                         currSong.updateLikeTotals(student);
                     }
@@ -146,94 +129,4 @@ public class Reader {
 
         return students;
     }
-
-    /**
-     * keeps a total of how many students have
-     * each type of attribute in order to
-     * calculate the percentages later
-     * 
-     * @param s
-     *            Student to be analyzed
-     */
-    /*
-     * private void countAttributes(Student s)
-     * {
-     * // for hobbies
-     * if (s.getHobby().equals("reading"))
-     * {
-     * hobbies[0]++;
-     * }
-     * else if (s.getHobby().equals("art"))
-     * {
-     * hobbies[1]++;
-     * }
-     * else if (s.getHobby().equals("sports"))
-     * {
-     * hobbies[2]++;
-     * }
-     * else if (s.getHobby().equals("music"))
-     * {
-     * hobbies[3]++;
-     * }
-     * 
-     * // for major
-     * if (s.getMajor().equals("Computer Science"))
-     * {
-     * majors[0]++;
-     * }
-     * else if (s.getMajor().equals("Other Engineering"))
-     * {
-     * majors[1]++;
-     * }
-     * else if (s.getMajor().equals("Math or CMDA"))
-     * {
-     * majors[2]++;
-     * }
-     * else if (s.getMajor().equals("Other"))
-     * {
-     * majors[3]++;
-     * }
-     * 
-     * // for state
-     * if (s.getRegion().equals("Northeast"))
-     * {
-     * regions[0]++;
-     * }
-     * else if (s.getRegion().equals("Southeast"))
-     * {
-     * regions[1]++;
-     * }
-     * else if (s.getRegion().contains("other"))
-     * {
-     * regions[2]++;
-     * }
-     * else if (s.getRegion().contains("Outside"))
-     * {
-     * regions[3]++;
-     * }
-     * }
-     */
-    /**
-     * @return the total number of students
-     *         that have each specific hobby
-     */
-    // public int[] getTotalHobbies() {
-    // return hobbies;
-    // }
-
-    /**
-     * @return the total number of students
-     *         that have each specific major
-     */
-    // public int[] getTotalMajors() {
-    // return majors;
-    // }
-
-    /**
-     * @return the total number of students
-     *         that have each specific region
-     */
-    // public int[] getTotalRegions() {
-    // return regions;
-    // }
 }

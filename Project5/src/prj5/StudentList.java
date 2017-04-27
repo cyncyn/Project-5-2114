@@ -146,6 +146,7 @@ public class StudentList {
         }
 
 
+        // ~ Methods------------------------
         /**
          * links the node to the next one
          * 
@@ -194,6 +195,7 @@ public class StudentList {
         private Node<Student> nextNode;
 
 
+        // ~ Constructor------------------
         /**
          * Creates a new StudentIterator
          */
@@ -207,6 +209,7 @@ public class StudentList {
         }
 
 
+        // ~ Methods------------------------
         /**
          * Checks if there are more elements in the list
          *
@@ -233,7 +236,6 @@ public class StudentList {
         @Override
         public Student next() {
             if (hasNext()) {
-                // nextCalled = true;
                 Node<Student> returnNode = nextNode;
                 nextNode = nextNode.next();
                 return returnNode.getData();
