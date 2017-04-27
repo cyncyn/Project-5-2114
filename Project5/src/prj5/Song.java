@@ -26,7 +26,7 @@ public class Song {
 
     // ~ Constructor------------------
     /**
-     * new Song object
+     * Creates a new Song object
      * 
      * @param t
      *            The title of the song
@@ -67,6 +67,8 @@ public class Song {
 
     // ~ Methods-----------------------
     /**
+     * Gets the title of song
+     * 
      * @return the title of the Song
      */
     public String getTitle() {
@@ -75,6 +77,8 @@ public class Song {
 
 
     /**
+     * Gets the artist of the song
+     * 
      * @return the artist of the song
      */
     public String getArtist() {
@@ -83,6 +87,8 @@ public class Song {
 
 
     /**
+     * Gets the year of the song's release
+     * 
      * @return the year the song was released
      */
     public int getYear() {
@@ -91,6 +97,8 @@ public class Song {
 
 
     /**
+     * Gets the genre of the song
+     * 
      * @return the genre of the song
      */
     public String getGenre() {
@@ -100,7 +108,7 @@ public class Song {
 
     /**
      * adds a student who has heard this song
-     * to the list
+     * to the list of students who have heard this song
      * 
      * @param s
      *            The student to be added
@@ -112,19 +120,19 @@ public class Song {
 
     /**
      * adds a student who likes this song to
-     * its list
+     * the list students who like this song
      * 
      * @param s
      *            The student to be added
      */
     public void addToLikes(Student s) {
-        // might want to throw exception if the student
-        // hasn't heard the song
         likes.add(s);
     }
 
 
     /**
+     * Gets the list of students who have heard the song
+     * 
      * @return the list of Students who has heard
      *         the song
      */
@@ -134,6 +142,8 @@ public class Song {
 
 
     /**
+     * Gets the list of students who have liked the song
+     * 
      * @return the list of Students who has liked the song
      */
     public StudentList getLikes() {
@@ -142,6 +152,12 @@ public class Song {
 
 
     /**
+     * Returns a string in the format
+     * Song Title: Title
+     * Song Artist: Artist
+     * Song Genre: Genre
+     * Song Year: Year
+     * 
      * @return a string of the song's title, year,
      *         artist, and genre
      */
@@ -191,7 +207,7 @@ public class Song {
             majorsHeards[3]++;
         }
 
-        // for state
+        // for region
         if (s.getRegion().equals("Northeast")) {
             regionsHeards[0]++;
         }
@@ -243,7 +259,7 @@ public class Song {
             majorsLikes[3]++;
         }
 
-        // for state
+        // for region
         if (s.getRegion().equals("Northeast")) {
             regionsLikes[0]++;
         }
@@ -260,6 +276,9 @@ public class Song {
 
 
     /**
+     * Gets the array containing the total number of students who have heard the
+     * song for each hobby
+     * 
      * @return the total number of students that have each specific hobby and
      *         have heard this song
      */
@@ -269,6 +288,9 @@ public class Song {
 
 
     /**
+     * Gets the array containing the total number of students who have heard the
+     * song for each major
+     * 
      * @return the total number of students that have each specific major and
      *         have heard this song
      */
@@ -278,6 +300,9 @@ public class Song {
 
 
     /**
+     * Gets the array containing the total number of students who have heard the
+     * song for each region
+     * 
      * @return the total number of students that have each specific region and
      *         have heard this song
      */
@@ -287,6 +312,9 @@ public class Song {
 
 
     /**
+     * Gets the array containing the total number of students who have liked the
+     * song for each hobby
+     * 
      * @return the total number of students that have each specific hobby and
      *         like this song
      */
@@ -296,6 +324,9 @@ public class Song {
 
 
     /**
+     * Gets the array containing the total number of students who have liked the
+     * song for each major
+     * 
      * @return the total number of students that have each specific major and
      *         like this song
      */
@@ -305,6 +336,9 @@ public class Song {
 
 
     /**
+     * Gets the array containing the total number of students who have liked the
+     * song for each region
+     * 
      * @return the total number of students that have each specific region and
      *         like this song
      */

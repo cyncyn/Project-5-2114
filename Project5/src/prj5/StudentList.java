@@ -29,6 +29,7 @@ public class StudentList {
 
     // ~ Methods------------------------
     /**
+     * returns the size of the list
      * 
      * @return the size of the list
      */
@@ -62,51 +63,14 @@ public class StudentList {
 
 
     /**
+     * Checks whether or not the list is empty
+     * 
      * @return if the list is empty or not
      */
     public boolean isEmpty() {
         return size == 0;
     }
 
-// public void remove(Student student)
-// {
-// Node<Student> curr = firstNode;
-//
-// } do we need an remove method?????
-
-    /**
-     * returns the student at that position
-     * 
-     * @param pos
-     *            Position in the list
-     * @return the Student in the position
-     */
-// public Student get(int pos)
-// {
-// Node<Student> curr = firstNode;
-// int i = 1;
-// Student s = null;
-// while (curr != null)
-// {
-// if (i == pos)
-// {
-// s = curr.getData();
-// }
-// i++;
-// curr = curr.next();
-// }
-//
-// if (s == null)
-// {
-// throw new IndexOutOfBoundsException();
-// }
-// return s;
-// }
-
-
-// public boolean contains(Student student)
-// {
-// } do we need contains??!??
 
     /**
      * empties the list
@@ -143,6 +107,7 @@ public class StudentList {
 
 
     /**
+     * Creates a StudentIterator to iterate through the StudentList
      * 
      * @return an Iterator object to iterate through
      *         the list of students
@@ -193,6 +158,8 @@ public class StudentList {
 
 
         /**
+         * Returns the next node in the list
+         * 
          * @return the next node in the list
          */
         public Node<E> next() {
@@ -201,6 +168,8 @@ public class StudentList {
 
 
         /**
+         * Gets the data in the node
+         * 
          * @return data that this node stores
          */
         public E getData() {
@@ -223,11 +192,10 @@ public class StudentList {
 
         // ~ Fields-----------------------
         private Node<Student> nextNode;
-        // private boolean nextCalled;
 
 
         /**
-         * Creates a new DLListIterator
+         * Creates a new StudentIterator
          */
         public StudentIterator() {
             if (isEmpty()) {
@@ -236,7 +204,6 @@ public class StudentList {
             else {
                 nextNode = firstNode;
             }
-            // nextCalled = false;
         }
 
 
@@ -275,18 +242,6 @@ public class StudentList {
                 throw new NoSuchElementException();
             }
         }
-
-        /**
-         * Removes the last object returned with next() from the list
-         *
-         * @throws IllegalStateException
-         *             if next has not been called yet
-         *             and if the element has already been removed
-         */
-// @Override
-// public void remove() { don't need a remove method
-//
-// }
     }
 
 }

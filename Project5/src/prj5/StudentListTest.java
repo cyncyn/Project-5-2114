@@ -86,17 +86,6 @@ public class StudentListTest extends TestCase {
 
 
     /**
-     * tests if the get method returns the right student
-     */
-// public void testGet() {
-// list.add(charlie);
-// list.add(vikram);
-// list.add(cynthia);
-// list.add(mitchell);
-// assertEquals(c, list.get(3));
-// }
-
-    /**
      * tests if clear clears the list
      */
     public void testClear() {
@@ -119,7 +108,7 @@ public class StudentListTest extends TestCase {
 
 
     /**
-     * tests the to string method
+     * tests the toString method returns the correct string 
      */
     public void testToString() {
         String test = "List of 0 Students.\n";

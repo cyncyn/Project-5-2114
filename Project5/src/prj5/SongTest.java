@@ -110,7 +110,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * tests if students get added to likes correctly
+     * tests if addToLikes adds students to likes correctly
      */
     public void testAddToLikes() {
         assertEquals(1, royals.getLikes().size());
@@ -120,7 +120,8 @@ public class SongTest extends TestCase {
 
 
     /**
-     * tests that heards returns the right list
+     * tests that getHeards returns the right list of people who have heard the
+     * song before
      */
     public void testGetHeards() {
         assertEquals(3, perfect.getHeards().size());
@@ -128,7 +129,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * tests if toString returns the right representation
+     * tests if the toString method returns the right representation
      */
     public void testToString() {
         String test = "Song Title: Smile\n" + "Song Artist: Uncle Kracker\n"
@@ -187,6 +188,7 @@ public class SongTest extends TestCase {
         assertEquals(1, perfect.getMajorsLikes()[3]);
         assertEquals(1, perfect.getRegionsLikes()[3]);
         perfect.updateLikeTotals(charlie);
+        
     }
 
 }

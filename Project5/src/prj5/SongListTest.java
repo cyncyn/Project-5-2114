@@ -85,7 +85,7 @@ public class SongListTest extends TestCase {
 
 
     /**
-     * tests if the method adds correctly
+     * tests that the add method adds songs to the list correctly
      */
     public void testAdd() {
         assertEquals(7, list.getSize());
@@ -93,6 +93,8 @@ public class SongListTest extends TestCase {
         list.add(irresistible);
         assertEquals(8, list.getSize());
 
+        // Checks that an IllegalArgumentException is thrown when a null object
+        // tries to be added to the list
         Exception exception;
         exception = null;
         try {
@@ -106,7 +108,7 @@ public class SongListTest extends TestCase {
 
 
     /**
-     * tests if it returns true when list is empty
+     * tests if the isEmpty method returns whether or not the list is empty
      */
     public void testIsEmpty() {
         SongList list2 = new SongList();
@@ -117,7 +119,7 @@ public class SongListTest extends TestCase {
 
 
     /**
-     * tests if this method clears the list correctly
+     * tests if the testClear method clears the list correctly
      */
     public void testClear() {
         SongList list2 = new SongList();
@@ -165,6 +167,9 @@ public class SongListTest extends TestCase {
         assertEquals(starving, it.next());
         assertFalse(it.hasNext());
 
+        // Checks that a NoSuchElementException is thrown when the iterator
+        // tries to iterate to the next song but there are no more songs in the
+        // list
         Exception exception = null;
         try {
             it.next();
@@ -182,8 +187,8 @@ public class SongListTest extends TestCase {
 
 
     /**
-     * tests if the songs sort in the correct order
-     * for each type of sort
+     * tests if the sortSongs method sorts the songs in the correct order for
+     * each type of sort
      */
     public void testSortSongs() {
         SongList list2 = new SongList();

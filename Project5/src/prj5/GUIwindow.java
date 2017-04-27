@@ -43,8 +43,6 @@ public class GUIwindow {
     private TextShape legendAttribute4;
 
     private SongList songs;
-    //private StudentList students;
-    //private Reader reader;
     private String lastCalled;
     private boolean isClear;
     private int page;
@@ -60,8 +58,6 @@ public class GUIwindow {
         window = new Window("Project 5");
 
         songs = songList;
-        //students = studentList;
-        //reader = r;
 
         setUpButtons();
         next.disable();
@@ -129,6 +125,8 @@ public class GUIwindow {
      * and 9 glyphs with the song titles, like, and heard bars
      */
     private void setUpWindow() {
+        // Creates all of the titles with the title of the song and the artists'
+        // names
         int startX = 125;
         int startY = 10;
         int xinc = 250;
@@ -139,8 +137,8 @@ public class GUIwindow {
             for (int j = 0; j < 3; j++) {
                 titles[i + j] = new TextShape(startX + (j * xinc), startY + ((i
                     / 3) * yinc), "title" + (i + j));
-                artists[i + j] = new TextShape(startX + (j * xinc), startY + 20 + ((i
-                    / 3) * yinc), "artist" + (i + j));
+                artists[i + j] = new TextShape(startX + (j * xinc), startY + 20
+                    + ((i / 3) * yinc), "artist" + (i + j));
             }
         }
         for (int i = 0; i < titles.length; i++) {
@@ -151,6 +149,7 @@ public class GUIwindow {
             centerTitle(titles[i], artists[i]);
         }
 
+        // Creates all of the dividers between the heards and likes bars
         int divStartX = 120;
         int divStartY = 50;
         int divHeight = 10;
@@ -167,6 +166,7 @@ public class GUIwindow {
             window.addShape(divs[i]);
         }
 
+        // Creates all of the heard bars
         int barHeight = 10;
         int barWidth = 100;
         heards = new Shape[36];
@@ -190,6 +190,7 @@ public class GUIwindow {
             window.addShape(heards[i]);
         }
 
+        // Creates all of the like bars
         likes = new Shape[36];
         for (int i = 0; i < heards.length; i = i + 12) {
             for (int j = 0; j < 3; j++) {
@@ -211,7 +212,7 @@ public class GUIwindow {
             window.addShape(likes[i]);
         }
 
-        // Legend
+        // Creates the legend
         int legendStartX = 775;
         int legendStartY = 200;
         int legendWidth = 150;
@@ -314,10 +315,10 @@ public class GUIwindow {
 
 
     /**
-     * Sorts the songs by alphabetical order according to their titles
+     * Sorts the songs by alphabetical order according to their genres
      * 
-     * @param titleButton
-     *            The button that sorts the songs by title
+     * @param genreButton
+     *            The button that sorts the songs by genre
      */
     public void clickedGenre(Button genreButton) {
         window.removeAllShapes();
@@ -383,10 +384,12 @@ public class GUIwindow {
         }
 
         int limit = 9;
+        // If on the last page
         if (page == numPages - 1) {
+            // Calculates how many songs are on the last page
             limit = songs.getSize() % 9;
-
-            // *************************
+            // Hides the titles and dividers of the left over glyphs that do not
+            // have a new song
             int c = 9 - songs.getSize() % 9 + 1;
             while (c < 9) {
                 titles[c].setForegroundColor(Color.WHITE);
@@ -397,8 +400,8 @@ public class GUIwindow {
             }
         }
 
-        while (i < limit) // i+9 // it.hasNext())
-        {
+        // Updates all of the song titles on the page
+        while (i < limit) {
             currentSong = it.next();
             int titleShift = titles[i].getWidth() / 2;
             int artistShift = artists[i].getWidth() / 2;
@@ -414,7 +417,6 @@ public class GUIwindow {
             artistShift = artists[i].getWidth() / 2;
             titles[i].move(-titleShift, 0);
             artists[i].move(-artistShift, 0);
-            // centerTitle(titles[i]);
             i++;
         }
     }
@@ -426,9 +428,13 @@ public class GUIwindow {
      * @param pos
      *            starting position
      * @param first
+     *            the percentage size of the first bar
      * @param second
+     *            the percentage size of the second bar
      * @param third
+     *            the percentage size of the third bar
      * @param fourth
+     *            the percentage size of the fourth bar
      */
     private void displayHeardBars(
         int pos,
@@ -471,9 +477,13 @@ public class GUIwindow {
      * @param pos
      *            starting position
      * @param first
+     *            the percentage size of the first bar
      * @param second
+     *            the percentage size of the second bar
      * @param third
+     *            the percentage size of the third bar
      * @param fourth
+     *            the percentage size of the fourth bar
      */
     private void displayLikedBars(
         int pos,
@@ -507,21 +517,27 @@ public class GUIwindow {
 
 
     /**
+     * Runs when the hobbyButton is clicked. Changes the attribute being looked
+     * at to hobby
      * 
      * @param hobbyButton
      *            the button that indicates the user
      *            wants to represent the likes and heards by hobby
      */
     public void clickedHobby(Button hobbyButton) {
+        // Enables the next button after the page is setUp
         if (page != numPages - 1) {
             next.enable();
         }
+        // Sorts the songs by title if the hobbyButton is the first button
+        // pushed
         if (isClear) {
             isClear = false;
             lastCalled = "hobby";
             clickedTitle(titleButton);
         }
 
+        // Updates the legend
         legendAttribute1.setText("Reading");
         legendAttribute2.setText("Art");
         legendAttribute3.setText("Sports");
@@ -530,6 +546,7 @@ public class GUIwindow {
         Song currentSong = null;
         Iterator<Song> it = songs.iterator();
 
+        // Moves the iterator to the proper song according to the page
         for (int j = 0; j < page * 9; j++) {
             currentSong = it.next();
 
@@ -537,10 +554,13 @@ public class GUIwindow {
 
         int i = 0;
         int limit = 36;
+        // If on the last page
         if (page == numPages - 1) {
+            // Calculates how many songs are on the last page
             limit = (songs.getSize() % 9) * 4;
 
-            // *****************************
+            // Hides all of the heards and likes bars of the left over glyphs
+            // that do not have a new song
             int c = (9 - songs.getSize() % 9 + 1) * 4;
             while (c < 36) {
                 displayHeardBars(c, 0, 0, 0, 0);
@@ -548,6 +568,7 @@ public class GUIwindow {
                 c = c + 4;
             }
         }
+        // Updates all of the heards and likes bars
         while (i < limit) {
             currentSong = it.next();
             HashMap<String, int[]> resultHobby = Solver.solve(currentSong,
@@ -614,44 +635,37 @@ public class GUIwindow {
                 percentLikedMusic = ((double)music[1] / (double)totalMusicLikes)
                     * 100;
             }
-
+            // Displays the bars
             displayHeardBars(i, (int)percentHeardReading, (int)percentHeardArt,
                 (int)percentHeardSports, (int)percentHeardMusic);
             displayLikedBars(i, (int)percentLikedReading, (int)percentLikedArt,
                 (int)percentLikedSports, (int)percentLikedMusic);
             i = i + 4;
 
+            // Sets the last attribute to be looked at to "hobby"
             lastCalled = "hobby";
-
-            System.out.println(currentSong.toString());
-            System.out.println("Heard");
-            System.out.println("reading:" + (int)percentHeardReading + " art:"
-                + (int)percentHeardArt + " sports:" + (int)percentHeardSports
-                + " music:" + (int)percentHeardMusic);
-            System.out.println("Likes");
-            System.out.println("reading:" + (int)percentLikedReading + " art:"
-                + (int)percentLikedArt + " sports:" + (int)percentLikedSports
-                + " music:" + (int)percentLikedMusic);
-            System.out.println("");
-
         }
-
-        System.out.println("Done");
     }
 
 
     /**
+     * Runs when the majorButton is clicked. Changes the attribute being looked
+     * at to major
      * 
      * @param majorButton
      *            the button that indicates the user
      *            wants to represent the likes and heards by major
      */
     public void clickedMajor(Button majorButton) {
+        // Sorts the songs by title if the majorButton is the first button
+        // pushed
         if (isClear) {
             isClear = false;
             lastCalled = "major";
             clickedTitle(titleButton);
         }
+
+        // Updates the legend
         legendAttribute1.setText("CS");
         legendAttribute2.setText("Other Engineering");
         legendAttribute3.setText("Math");
@@ -660,14 +674,20 @@ public class GUIwindow {
         Song currentSong = null;
         Iterator<Song> it = songs.iterator();
 
+        // Moves the iterator to the proper song according to the page
         for (int j = 0; j < page * 9; j++) {
             currentSong = it.next();
         }
 
         int i = 0;
         int limit = 36;
+        // If on the last page
         if (page == numPages - 1) {
+            // Calculates how many songs are on the last page
             limit = (songs.getSize() % 9) * 4;
+
+            // Hides the titles and dividers of the left over glyphs that do not
+            // have a new song
             int c = (9 - songs.getSize() % 9 + 1) * 4;
             while (c < 36) {
                 displayHeardBars(c, 0, 0, 0, 0);
@@ -740,34 +760,26 @@ public class GUIwindow {
                     * 100;
             }
 
+            // Displays the heards and likes bars
             displayHeardBars(i, (int)percentHeardCS, (int)percentHeardEnge,
                 (int)percentHeardMath, (int)percentHeardOther);
             displayLikedBars(i, (int)percentLikedCS, (int)percentLikedEnge,
                 (int)percentLikedMath, (int)percentLikedOther);
             i = i + 4;
 
+            // Sets the last attribute to be looked at to "major"
             lastCalled = "major";
-
-            System.out.println(currentSong.toString());
-            System.out.println("Heard");
-            System.out.println("CS:" + (int)percentHeardCS + " Enge:"
-                + (int)percentHeardEnge + " math:" + (int)percentHeardMath
-                + " other:" + (int)percentHeardOther);
-            System.out.println("Likes");
-            System.out.println("CS:" + (int)percentLikedCS + " Enge:"
-                + (int)percentLikedEnge + " math:" + (int)percentLikedMath
-                + " other:" + (int)percentLikedOther);
-            System.out.println("");
-
         }
     }
 
 
     /**
+     * Runs when the regionButton is clicked. Changes the attribute being looked
+     * at to region
      * 
-     * @param majorButton
+     * @param regionButton
      *            the button that indicates the user
-     *            wants to represent the likes and heards by major
+     *            wants to represent the likes and heards by region
      */
     public void clickedRegion(Button regionButton) {
         if (isClear) {
@@ -775,6 +787,8 @@ public class GUIwindow {
             lastCalled = "region";
             clickedTitle(titleButton);
         }
+
+        // Updates the legend
         legendAttribute1.setText("Northeast US");
         legendAttribute2.setText("Southeast US");
         legendAttribute3.setText("The rest of the US");
@@ -783,14 +797,20 @@ public class GUIwindow {
         Song currentSong = null;
         Iterator<Song> it = songs.iterator();
 
+        // Moves the iterator to the proper song according to the page
         for (int j = 0; j < page * 9; j++) {
             currentSong = it.next();
         }
 
         int i = 0;
         int limit = 36;
+        // If on the last page
         if (page == numPages - 1) {
+            // Calculates how many songs are on the last page
             limit = (songs.getSize() % 9) * 4;
+
+            // Hides all of the heards and likes bars of the left over glyphs
+            // that do not have a new song
             int c = (9 - songs.getSize() % 9 + 1) * 4;
             while (c < 36) {
                 displayHeardBars(c, 0, 0, 0, 0);
@@ -862,43 +882,33 @@ public class GUIwindow {
                     * 100;
             }
 
+            // Displays all of the heards and likes bars
             displayHeardBars(i, (int)percentHeardNE, (int)percentHeardSE,
                 (int)percentHeardRest, (int)percentHeardOther);
             displayLikedBars(i, (int)percentLikedNE, (int)percentLikedSE,
                 (int)percentLikedRest, (int)percentLikedOther);
             i = i + 4;
 
+            // Sets the last attribute to be looked at to "region"
             lastCalled = "region";
-
-            System.out.println(currentSong.toString());
-            System.out.println("Heard");
-            System.out.println("NE:" + (int)percentHeardNE + " SE:"
-                + (int)percentHeardSE + " Other US:" + (int)percentHeardRest
-                + " other:" + (int)percentHeardOther);
-            System.out.println("Likes");
-            System.out.println("NE:" + (int)percentLikedNE + " SE:"
-                + (int)percentLikedSE + " Other US:" + (int)percentLikedRest
-                + " other:" + (int)percentLikedOther);
-            System.out.println("");
-
         }
     }
 
 
     /**
+     * Runs when the next button is clicked. Goes to the next page of songs
      * 
      * @param next
      *            the button that displays the next set of 9 songs
      */
     public void clickedNext(Button next) {
-
         if (page < numPages) {
             page++;
             previous.enable();
             displayNewSortedSongs();
             recalculate();
         }
-
+        // Disables the next button if on the last page
         if (page == numPages - 1) {
             next.disable();
         }
@@ -907,6 +917,8 @@ public class GUIwindow {
 
 
     /**
+     * Runs when the preivous button is clicked. Goes to the previous page of
+     * songs
      * 
      * @param previous
      *            the button that displays the previous set of 9 songs
@@ -918,7 +930,7 @@ public class GUIwindow {
             displayNewSortedSongs();
             recalculate();
         }
-
+        // Disables the previous button if on the first page
         if (page == 0) {
             previous.disable();
         }
@@ -949,6 +961,7 @@ public class GUIwindow {
 
 
     /**
+     * Quits the program when the quit button is clicked
      * 
      * @param quit
      *            the button that exits the program
